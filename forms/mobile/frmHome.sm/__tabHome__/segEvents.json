@@ -1,0 +1,377 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {
+            "ButtonEnroll": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ENROLL"
+            },
+            "imgComment": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "comment.png"
+            },
+            "imgEnroll": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "enroll.png"
+            },
+            "imgEvent": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "bck.PNG"
+            },
+            "imgLike": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "like.png"
+            },
+            "lblCompleted": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Completed"
+            },
+            "lblDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Feb 17"
+            },
+            "lblDay": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "22"
+            },
+            "lblDescription": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "The event is all about searching an item, the item could be anything of any size depending on the team size. The winner would be highest percentage."
+            },
+            "lblEventID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "lblEventName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Kony Visualizer 8.2"
+            },
+            "lblLocation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Phoenix"
+            },
+            "lblLocationName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Location : "
+            },
+            "lblMax": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Points:"
+            },
+            "lblOngoing": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Ongoing"
+            },
+            "lblScore": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "80"
+            },
+            "lblSeparator": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "k"
+            },
+            "lblTime": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 10 PM"
+            },
+            "lblTimeName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Time :   "
+            },
+            "lblUpcoming": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "UPCOMING"
+            }
+        },
+        {
+            "ButtonEnroll": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ENROLL"
+            },
+            "imgComment": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "comment.png"
+            },
+            "imgEnroll": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "enroll.png"
+            },
+            "imgEvent": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "bck.PNG"
+            },
+            "imgLike": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "like.png"
+            },
+            "lblCompleted": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Completed"
+            },
+            "lblDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Feb 17"
+            },
+            "lblDay": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "22"
+            },
+            "lblDescription": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "The event is all about searching an item, the item could be anything of any size depending on the team size. The winner would be highest percentage."
+            },
+            "lblEventID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "lblEventName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Kony Visualizer 8.2"
+            },
+            "lblLocation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Phoenix"
+            },
+            "lblLocationName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Location : "
+            },
+            "lblMax": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Points:"
+            },
+            "lblOngoing": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Ongoing"
+            },
+            "lblScore": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "80"
+            },
+            "lblSeparator": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "k"
+            },
+            "lblTime": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 10 PM"
+            },
+            "lblTimeName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Time :   "
+            },
+            "lblUpcoming": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "UPCOMING"
+            }
+        },
+        {
+            "ButtonEnroll": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ENROLL"
+            },
+            "imgComment": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "comment.png"
+            },
+            "imgEnroll": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "enroll.png"
+            },
+            "imgEvent": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "bck.PNG"
+            },
+            "imgLike": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "like.png"
+            },
+            "lblCompleted": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Completed"
+            },
+            "lblDate": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Feb 17"
+            },
+            "lblDay": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "22"
+            },
+            "lblDescription": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "The event is all about searching an item, the item could be anything of any size depending on the team size. The winner would be highest percentage."
+            },
+            "lblEventID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "lblEventName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Kony Visualizer 8.2"
+            },
+            "lblLocation": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Phoenix"
+            },
+            "lblLocationName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Location : "
+            },
+            "lblMax": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Points:"
+            },
+            "lblOngoing": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Ongoing"
+            },
+            "lblScore": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "80"
+            },
+            "lblSeparator": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "k"
+            },
+            "lblTime": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 10 PM"
+            },
+            "lblTimeName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Time :   "
+            },
+            "lblUpcoming": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "UPCOMING"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "02",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segEvents",
+    "ide_onPull": "AS_Segment_4f3e4454990648ec8c06b7901ba6e13a",
+    "ide_onRowClick": "AS_Segment_d5fd7f01444645e7b56043acaa21d9f5",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "isvisible": true,
+    "kuid": "d3017bea7cdf4f1893b4353a3a216ff7",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "tabEvent",
+    "pf": "frmHome",
+    "retainselection": false,
+    "rowTemplateId": "e6f7662f62f6468ca43c8742d187df8a",
+    "rowcounter": 2,
+    "rowfocusskin": "sb363cb48fd64acab480a2d6cb7d446c",
+    "rowskin": "s513bb3c64af4f9aa9bd6b494dd11c4a",
+    "rowtemplate": "flxEv",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "sbf9de645a884e69803ed2739ee8a61b",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "showscrollbars": false,
+    "tabpaneId": "tabHome",
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "ButtonEnroll": "ButtonEnroll",
+        "DateCont": "DateCont",
+        "FlexContainer0a592a32577c646": "FlexContainer0a592a32577c646",
+        "LocationCont": "LocationCont",
+        "StatusCont": "StatusCont",
+        "TimeCont": "TimeCont",
+        "flxBottom": "flxBottom",
+        "flxComment": "flxComment",
+        "flxDesc": "flxDesc",
+        "flxEnroll": "flxEnroll",
+        "flxEv": "flxEv",
+        "flxFooter": "flxFooter",
+        "flxHeader": "flxHeader",
+        "flxImg": "flxImg",
+        "flxLike": "flxLike",
+        "flxMain": "flxMain",
+        "imgComment": "imgComment",
+        "imgEnroll": "imgEnroll",
+        "imgEvent": "imgEvent",
+        "imgLike": "imgLike",
+        "lblCompleted": "lblCompleted",
+        "lblDate": "lblDate",
+        "lblDay": "lblDay",
+        "lblDescription": "lblDescription",
+        "lblEventID": "lblEventID",
+        "lblEventName": "lblEventName",
+        "lblLocation": "lblLocation",
+        "lblLocationName": "lblLocationName",
+        "lblMax": "lblMax",
+        "lblOngoing": "lblOngoing",
+        "lblScore": "lblScore",
+        "lblSeparator": "lblSeparator",
+        "lblTime": "lblTime",
+        "lblTimeName": "lblTimeName",
+        "lblUpcoming": "lblUpcoming"
+    },
+    "zindex": 1
+}

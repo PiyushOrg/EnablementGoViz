@@ -1,0 +1,264 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {
+            "Image0715357f567144f": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "rankshape.png"
+            },
+            "RankImg": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "rankshape.png"
+            },
+            "lblEventName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Event Name"
+            },
+            "lblLine": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblPlace": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Board Room: Phoenix"
+            },
+            "lblPlaceName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            },
+            "lblPoints": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "30"
+            },
+            "lblPointsName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Points:"
+            },
+            "lblRank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "3"
+            },
+            "lblRankName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Rank"
+            },
+            "lblTime": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            },
+            "lblTimeName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            }
+        },
+        {
+            "Image0715357f567144f": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "rankshape.png"
+            },
+            "RankImg": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "rankshape.png"
+            },
+            "lblEventName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Event Name"
+            },
+            "lblLine": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblPlace": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Board Room: Phoenix"
+            },
+            "lblPlaceName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            },
+            "lblPoints": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "30"
+            },
+            "lblPointsName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Points:"
+            },
+            "lblRank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "3"
+            },
+            "lblRankName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Rank"
+            },
+            "lblTime": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            },
+            "lblTimeName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            }
+        },
+        {
+            "Image0715357f567144f": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "rankshape.png"
+            },
+            "RankImg": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "rankshape.png"
+            },
+            "lblEventName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Event Name"
+            },
+            "lblLine": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblPlace": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Board Room: Phoenix"
+            },
+            "lblPlaceName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            },
+            "lblPoints": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "30"
+            },
+            "lblPointsName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Points:"
+            },
+            "lblRank": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "3"
+            },
+            "lblRankName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Rank"
+            },
+            "lblTime": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            },
+            "lblTimeName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "10 AM - 01 PM"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "31.70%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "02",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segMyEvents",
+    "ide_onPull": "AS_Segment_0765ec05573745bebabe53b3991d7169",
+    "ide_onRowClick": "AS_Segment_1df2f5cdad5e4ecfb29b0cd7c893ee95",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "isvisible": true,
+    "kuid": "dbef368a83cd434488edd53e554a16dd",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "tabMyEvent",
+    "pf": "frmHome",
+    "retainselection": false,
+    "rowTemplateId": "55f7aba5464c404ea862adfaf3a1c6d6",
+    "rowcounter": 2,
+    "rowfocusskin": "sb363cb48fd64acab480a2d6cb7d446c",
+    "rowskin": "s560351d0a7044e8b70abf812f945294",
+    "rowtemplate": "EventMainCont",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "sbf9de645a884e69803ed2739ee8a61b",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "showscrollbars": false,
+    "tabpaneId": "tabHome",
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "CardCont": "CardCont",
+        "EventMainCont": "EventMainCont",
+        "Image0715357f567144f": "Image0715357f567144f",
+        "LocationCont": "LocationCont",
+        "PointsCont": "PointsCont",
+        "RankCont": "RankCont",
+        "RankImg": "RankImg",
+        "TimeCont": "TimeCont",
+        "lblEventName": "lblEventName",
+        "lblLine": "lblLine",
+        "lblPlace": "lblPlace",
+        "lblPlaceName": "lblPlaceName",
+        "lblPoints": "lblPoints",
+        "lblPointsName": "lblPointsName",
+        "lblRank": "lblRank",
+        "lblRankName": "lblRankName",
+        "lblTime": "lblTime",
+        "lblTimeName": "lblTimeName"
+    },
+    "zindex": 5
+}

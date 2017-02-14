@@ -1,0 +1,21 @@
+{
+    "AS_AppEvents_ee86c84e5b134efd8546ebad61c19c23": {
+        "id": "AS_AppEvents_ee86c84e5b134efd8546ebad61c19c23",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___14c81d18de8e463cbcd9e2a3d95036c7",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "postAppInit",
+            "display": "postAppInit",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null
+        }]
+    }
+}
