@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "14%"
+        "value": "1%"
     },
     "_margin_": [
         1,
@@ -22,16 +22,8 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "number",
-        "value": "0"
-    },
-    "_skin_": "s80479394bde4fcc9a96d1eb1bcd5d2f",
-    "_text_": "Points:",
-    "_top_": {
-        "type": "string",
-        "value": "26%"
-    },
+    "_skin_": "se58f58a6c0548e4b3b0814934f194f7",
+    "_text_": "(40)",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -44,10 +36,14 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblMax",
+    "id": "NoOfRatings",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,9 +56,9 @@
         }
     },
     "isvisible": true,
-    "kuid": "2510734fde004ab781e99d735259badf",
+    "kuid": "a5a2ed335ea940d7a6b4792707d65933",
     "name": "kony.ui.Label",
-    "parent": "flxHeader",
+    "parent": "RatingCont",
     "pf": "segEvents",
     "tooltip": "",
     "wType": "Label",

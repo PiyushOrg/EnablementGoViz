@@ -19,6 +19,9 @@ sessionID = "";
 
 function appInit(params) {
     skinsInit();
+    kony.application.setCheckBoxSelectionImageAlignment(constants.CHECKBOX_SELECTION_IMAGE_ALIGNMENT_RIGHT);
+    kony.application.setDefaultTextboxPadding(false);
+    kony.application.setRespectImageSizeForImageWidgetAlignment(true);
     initializeMyEventSegNew();
     initializenewSegLeadBoard();
     initializesegEvents();
@@ -56,9 +59,6 @@ function themeCallBack() {
 
 function loadResources() {
     globalhttpheaders = {};
-    kony.os.loadLibrary({
-        "javaclassname": "com.konylabs.ffi.N_barcode"
-    });
     sdkInitConfig = {
         "appConfig": appConfig,
         "isMFApp": appConfig.isMFApp,

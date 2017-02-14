@@ -3,7 +3,11 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "15%"
+        "value": "95%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4%"
     },
     "_margin_": [
         0,
@@ -19,38 +23,36 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s233df19964b49d2811d1570dbbec3a2",
-    "_top_": {
-        "type": "number",
-        "value": "0"
-    },
+    "_skin_": "s44a3cc40890412f8e07442d4145a4d5",
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "45%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
+    "centery": {
         "type": "string",
         "value": "50%"
     },
     "children": [
-        "lblEventName",
-        "lblMax",
-        "lblScore"
+        "Star1",
+        "Star2",
+        "Star3",
+        "Star4",
+        "Star5"
     ],
     "clipbounds": true,
     "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxHeader",
+    "id": "RatingBar",
     "info": null,
     "isvisible": true,
-    "kuid": "66aa77005a444237b5bf5e1643669c12",
+    "kuid": "de9f27af88614d7e87e26c07c3dca6e9",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMain",
+    "parent": "RatingCont",
     "pf": "segEvents",
     "snapgridsize": 10,
     "snaptogrid": true,

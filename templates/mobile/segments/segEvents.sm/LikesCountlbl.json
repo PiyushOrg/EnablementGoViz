@@ -6,10 +6,6 @@
         "type": "ref",
         "value": "preferred"
     },
-    "_left_": {
-        "type": "string",
-        "value": "14%"
-    },
     "_margin_": [
         1,
         1,
@@ -23,15 +19,11 @@
         0
     ],
     "_right_": {
-        "type": "number",
-        "value": "0"
-    },
-    "_skin_": "s80479394bde4fcc9a96d1eb1bcd5d2f",
-    "_text_": "Points:",
-    "_top_": {
         "type": "string",
-        "value": "26%"
+        "value": "2%"
     },
+    "_skin_": "s68e178c71ab414ba77a095f08c16fc3",
+    "_text_": "(30)",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -44,10 +36,14 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblMax",
+    "id": "LikesCountlbl",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,9 +56,9 @@
         }
     },
     "isvisible": true,
-    "kuid": "2510734fde004ab781e99d735259badf",
+    "kuid": "f12dcc8365ac40b4954f509ec18e5d5d",
     "name": "kony.ui.Label",
-    "parent": "flxHeader",
+    "parent": "LikesCont",
     "pf": "segEvents",
     "tooltip": "",
     "wType": "Label",

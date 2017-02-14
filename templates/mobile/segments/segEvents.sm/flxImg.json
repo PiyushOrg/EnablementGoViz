@@ -3,7 +3,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "46%"
+        "value": "45%"
     },
     "_left_": {
         "type": "string",
@@ -41,7 +41,8 @@
     },
     "children": [
         "imgEvent",
-        "lblEventID"
+        "lblEventID",
+        "LikesCont"
     ],
     "clipbounds": true,
     "containerId": true,

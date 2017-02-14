@@ -41,6 +41,7 @@
     },
     "children": [
         "flxHeader",
+        "RatingCont",
         "flxImg",
         "flxBottom",
         "flxDesc",

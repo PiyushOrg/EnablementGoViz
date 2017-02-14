@@ -8,6 +8,38 @@
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "ENROLL"
             },
+            "LikeImg": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "LikesCountlbl": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "NoOfRatings": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "Star1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star5": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
             "imgComment": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "comment.png"
@@ -90,6 +122,38 @@
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "ENROLL"
             },
+            "LikeImg": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "LikesCountlbl": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "NoOfRatings": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "Star1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star5": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
             "imgComment": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "comment.png"
@@ -171,6 +235,38 @@
             "ButtonEnroll": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "ENROLL"
+            },
+            "LikeImg": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "LikesCountlbl": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "NoOfRatings": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "Star1": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star2": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star3": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star4": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "Star5": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
             },
             "imgComment": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
@@ -340,7 +436,18 @@
         "ButtonEnroll": "ButtonEnroll",
         "DateCont": "DateCont",
         "FlexContainer0a592a32577c646": "FlexContainer0a592a32577c646",
+        "LikeImg": "LikeImg",
+        "LikesCont": "LikesCont",
+        "LikesCountlbl": "LikesCountlbl",
         "LocationCont": "LocationCont",
+        "NoOfRatings": "NoOfRatings",
+        "RatingBar": "RatingBar",
+        "RatingCont": "RatingCont",
+        "Star1": "Star1",
+        "Star2": "Star2",
+        "Star3": "Star3",
+        "Star4": "Star4",
+        "Star5": "Star5",
         "StatusCont": "StatusCont",
         "TimeCont": "TimeCont",
         "flxBottom": "flxBottom",

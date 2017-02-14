@@ -5,11 +5,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "95%"
     },
     "_left_": {
         "type": "string",
-        "value": "0%"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -24,32 +24,35 @@
         0
     ],
     "_skin_": "s458ddeb64e14873a3f4b1eb2d6201b7",
-    "_src_": "bck.PNG",
+    "_src_": "imagedrag.png",
     "_top_": {
         "type": "string",
-        "value": "0%"
+        "value": "47dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "20%"
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerId": true,
     "containerweight": 100,
     "context": {
         "channel": "mobile",
-        "platform": "android",
+        "formID": "segEvents",
         "templateType": "segments",
         "topLevelBox": null
     },
-    "id": "imgEvent",
-    "imagescalemode": 0,
+    "id": "Star5",
+    "imagescalemode": 1,
     "info": null,
-    "invokedProperty": "src",
     "isvisible": true,
-    "kuid": "f33f863bedc24a01ac37789d8adaa815",
+    "kuid": "2993dd7b59304fcc96ec0fc049e48a6c",
     "name": "kony.ui.Image2",
-    "parent": "flxImg",
+    "parent": "RatingBar",
     "pf": "segEvents",
     "srcType": 1,
     "wType": "Image",
