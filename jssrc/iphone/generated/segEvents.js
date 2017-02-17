@@ -9,18 +9,31 @@ function initializesegEvents() {
         "skin": "CopyslFbox0c50320d01fb546"
     }, {}, {});
     flxEv.setDefaultUnit(kony.flex.DP);
+    var flexShodow = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerX": "50%",
+        "centerY": "50%",
+        "clipBounds": true,
+        "height": "95%",
+        "id": "flexShodow",
+        "isVisible": true,
+        "layoutType": kony.flex.FREE_FORM,
+        "skin": "CopyslFbox0a9758ed0c9ac40",
+        "width": "95%",
+        "zIndex": 1
+    }, {}, {});
+    flexShodow.setDefaultUnit(kony.flex.DP);
     var flxMain = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
+        "centerY": "48%",
         "clipBounds": true,
-        "height": "90%",
+        "height": "98%",
         "id": "flxMain",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_VERTICAL,
-        "left": "3%",
         "skin": "CopyslFbox0075ffa25008f4f",
-        "top": "8%",
-        "width": "90%",
+        "width": "99.90%",
         "zIndex": 1
     }, {}, {});
     flxMain.setDefaultUnit(kony.flex.DP);
@@ -28,7 +41,7 @@ function initializesegEvents() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "19%",
+        "height": "15%",
         "id": "flxHeader",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
@@ -43,7 +56,7 @@ function initializesegEvents() {
         "height": "60%",
         "id": "lblEventName",
         "isVisible": true,
-        "left": "3%",
+        "left": "4%",
         "skin": "CopyslLabel00c79a2fc34c644",
         "text": "Kony Visualizer 8.2",
         "width": "60%",
@@ -59,7 +72,7 @@ function initializesegEvents() {
     var lblMax = new kony.ui.Label({
         "id": "lblMax",
         "isVisible": true,
-        "left": "16%",
+        "left": "14%",
         "right": 0,
         "skin": "CopyslLabel0d1da0de6521a4d",
         "text": "Points:",
@@ -91,11 +104,134 @@ function initializesegEvents() {
         "wrapping": constants.WIDGET_TEXT_WORD_WRAP
     });
     flxHeader.add(lblEventName, lblMax, lblScore);
+    var RatingCont = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerX": "50%",
+        "clipBounds": true,
+        "height": "12%",
+        "id": "RatingCont",
+        "isVisible": true,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
+        "left": 0,
+        "skin": "slFbox",
+        "top": "0dp",
+        "width": "100%",
+        "zIndex": 1
+    }, {}, {});
+    RatingCont.setDefaultUnit(kony.flex.DP);
+    var RatingBar = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerY": "50%",
+        "clipBounds": true,
+        "height": "95%",
+        "id": "RatingBar",
+        "isVisible": true,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
+        "left": "4%",
+        "skin": "slFbox",
+        "width": "26%",
+        "zIndex": 1
+    }, {}, {});
+    RatingBar.setDefaultUnit(kony.flex.DP);
+    var Star1 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "13dp",
+        "id": "Star1",
+        "isVisible": true,
+        "left": "1%",
+        "skin": "slImage",
+        "src": "rating_empty.png",
+        "width": "13dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star2 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "13dp",
+        "id": "Star2",
+        "isVisible": true,
+        "left": "3%",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "width": "13dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star3 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "13dp",
+        "id": "Star3",
+        "isVisible": true,
+        "left": "3%",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "width": "13dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star4 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "13dp",
+        "id": "Star4",
+        "isVisible": true,
+        "left": "3%",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "width": "13dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star5 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "13dp",
+        "id": "Star5",
+        "isVisible": true,
+        "left": "3dp",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "width": "13dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    RatingBar.add(Star1, Star2, Star3, Star4, Star5);
+    var NoOfRatings = new kony.ui.Label({
+        "centerY": "50%",
+        "id": "NoOfRatings",
+        "isVisible": true,
+        "left": "1%",
+        "skin": "CopyslLabel0212b9c2591ac45",
+        "text": "(40)",
+        "width": kony.flex.USE_PREFFERED_SIZE,
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {
+        "textCopyable": false,
+        "wrapping": constants.WIDGET_TEXT_WORD_WRAP
+    });
+    RatingCont.add(RatingBar, NoOfRatings);
     var flxImg = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "46%",
+        "height": "45%",
         "id": "flxImg",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
@@ -113,7 +249,7 @@ function initializesegEvents() {
         "left": "0%",
         "skin": "slImage",
         "src": "bck.PNG",
-        "top": "0%",
+        "top": "1%",
         "width": "100%",
         "zIndex": 1
     }, {
@@ -143,7 +279,7 @@ function initializesegEvents() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "35%",
+        "height": "30%",
         "id": "flxBottom",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
@@ -347,7 +483,7 @@ function initializesegEvents() {
         "isVisible": false,
         "layoutType": kony.flex.FREE_FORM,
         "left": "0.50%",
-        "onClick": AS_FlexContainer_95998eaa8c64415e96a4f631adb6facc,
+        "onClick": AS_FlexContainer_58f0b9102b6144c9aa61bcd73569aa4f,
         "skin": "CopyslFbox0eabb42e7d3924b",
         "top": "33.50%",
         "width": "22.50%",
@@ -374,9 +510,9 @@ function initializesegEvents() {
         "focusSkin": "CopyslButtonGlossBlue0bacd52f84f9a4c",
         "height": "31%",
         "id": "ButtonEnroll",
-        "isVisible": true,
+        "isVisible": false,
         "left": "0.50%",
-        "onClick": AS_Button_cdd402b9eaff4443b7b8b123201bd1d6,
+        "onClick": AS_Button_92d694ec681d49ab9ae573b598279963,
         "skin": "CopyslButtonGlossBlue0bacd52f84f9a4c",
         "text": "ENROLL",
         "top": "33.50%",
@@ -390,7 +526,55 @@ function initializesegEvents() {
     }, {
         "showProgressIndicator": true
     });
-    flxBottom.add(DateCont, StatusCont, flxEnroll, ButtonEnroll);
+    var LikesCont = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "bottom": "0%",
+        "centerX": "18%",
+        "centerY": "50%",
+        "clipBounds": true,
+        "height": "30%",
+        "id": "LikesCont",
+        "isVisible": true,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
+        "skin": "CopyslFbox09de0ef80f72a40",
+        "width": "15%",
+        "zIndex": 1
+    }, {}, {});
+    LikesCont.setDefaultUnit(kony.flex.DP);
+    var LikeImg = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "15dp",
+        "id": "LikeImg",
+        "isVisible": true,
+        "left": "2%",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "width": "15dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var LikesCountlbl = new kony.ui.Label({
+        "centerY": "50%",
+        "id": "LikesCountlbl",
+        "isVisible": true,
+        "left": "6%",
+        "skin": "CopyslLabel0f997da76ff1f43",
+        "text": "(30)",
+        "width": kony.flex.USE_PREFFERED_SIZE,
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {
+        "textCopyable": false,
+        "wrapping": constants.WIDGET_TEXT_WORD_WRAP
+    });
+    LikesCont.add(LikeImg, LikesCountlbl);
+    flxBottom.add(DateCont, StatusCont, flxEnroll, ButtonEnroll, LikesCont);
     var flxDesc = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "clipBounds": true,
@@ -476,7 +660,7 @@ function initializesegEvents() {
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
         "left": "33.30%",
-        "onClick": AS_FlexContainer_484a8e6d76d44380a902f504992c5a18,
+        "onClick": AS_FlexContainer_52c1d9260eb74539867ae72c92ec5c33,
         "skin": "slFbox",
         "top": "0%",
         "width": "33.30%",
@@ -567,6 +751,7 @@ function initializesegEvents() {
         "wrapping": constants.WIDGET_TEXT_WORD_WRAP
     });
     FlexContainer0a592a32577c646.add(lblOngoing, lblCompleted, lblSeparator);
-    flxMain.add(flxHeader, flxImg, flxBottom, flxDesc, flxFooter, FlexContainer0a592a32577c646);
-    flxEv.add(flxMain);
+    flxMain.add(flxHeader, RatingCont, flxImg, flxBottom, flxDesc, flxFooter, FlexContainer0a592a32577c646);
+    flexShodow.add(flxMain);
+    flxEv.add(flexShodow);
 }

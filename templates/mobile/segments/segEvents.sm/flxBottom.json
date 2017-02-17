@@ -43,7 +43,8 @@
         "DateCont",
         "StatusCont",
         "flxEnroll",
-        "ButtonEnroll"
+        "ButtonEnroll",
+        "LikesCont"
     ],
     "clipbounds": true,
     "containerId": true,

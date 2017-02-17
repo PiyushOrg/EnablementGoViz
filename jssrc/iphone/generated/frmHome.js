@@ -22,7 +22,7 @@ function addWidgetsfrmHome() {
         "height": "6%",
         "id": "flxHeader",
         "isVisible": true,
-        "layoutType": kony.flex.FREE_FORM,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
         "skin": "CopyslFbox05d1e1dad82814c",
         "width": "100%",
         "zIndex": 1
@@ -78,12 +78,12 @@ function addWidgetsfrmHome() {
         "paddingInPixel": false
     }, {});
     var lblTitle1 = new kony.ui.Label({
+        "centerY": "50%",
         "id": "lblTitle1",
         "isVisible": true,
-        "left": "33.40%",
+        "left": "3%",
         "skin": "CopyslLabel0e1f2343ad3284b",
         "text": "Enablement",
-        "top": "22.50%",
         "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
@@ -95,12 +95,12 @@ function addWidgetsfrmHome() {
         "wrapping": constants.WIDGET_TEXT_WORD_WRAP
     });
     var lblTitle2 = new kony.ui.Label({
+        "centerY": "50%",
         "id": "lblTitle2",
         "isVisible": true,
-        "left": "59.20%",
+        "left": "1%",
         "skin": "CopyslLabel03da67889c87c44",
         "text": "GO",
-        "top": "22.50%",
         "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
@@ -113,14 +113,14 @@ function addWidgetsfrmHome() {
     });
     var SearchCont = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerY": "50%",
         "clipBounds": true,
         "height": "17dp",
         "id": "SearchCont",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
-        "left": "73.30%",
+        "left": "42%",
         "skin": "slFbox",
-        "top": "32.20%",
         "width": "17dp",
         "zIndex": 1
     }, {}, {});
@@ -159,65 +159,16 @@ function addWidgetsfrmHome() {
         "showProgressIndicator": true
     });
     SearchCont.add(SearchImg, BtnSearch);
-    var ScanCont = new kony.ui.FlexContainer({
-        "autogrowMode": kony.flex.AUTOGROW_NONE,
-        "clipBounds": true,
-        "height": "18dp",
-        "id": "ScanCont",
-        "isVisible": true,
-        "layoutType": kony.flex.FREE_FORM,
-        "left": "81.9%",
-        "skin": "slFbox",
-        "top": "31.70%",
-        "width": "19dp",
-        "zIndex": 1
-    }, {}, {});
-    ScanCont.setDefaultUnit(kony.flex.DP);
-    var ScanImg = new kony.ui.Image2({
-        "centerX": "50%",
-        "centerY": "50%",
-        "height": "100%",
-        "id": "ScanImg",
-        "isVisible": true,
-        "skin": "slImage",
-        "src": "scan_icn.png",
-        "width": "100%",
-        "zIndex": 1
-    }, {
-        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
-        "padding": [0, 0, 0, 0],
-        "paddingInPixel": false
-    }, {});
-    var BtnScan = new kony.ui.Button({
-        "centerX": "50%",
-        "centerY": "50%",
-        "focusSkin": "CopyslButtonGlossBlue0f280a71a262d4b",
-        "height": "100%",
-        "id": "BtnScan",
-        "isVisible": true,
-        "onClick": AS_Button_14c7e7561ad64d9c9dd99165b7e13486,
-        "skin": "CopyslButtonGlossBlue0f280a71a262d4b",
-        "width": "100%",
-        "zIndex": 1
-    }, {
-        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "displayText": true,
-        "padding": [0, 0, 0, 0],
-        "paddingInPixel": false
-    }, {
-        "showProgressIndicator": true
-    });
-    ScanCont.add(ScanImg, BtnScan);
     var LogoutCont = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerY": "50%",
         "clipBounds": true,
         "height": "20dp",
         "id": "LogoutCont",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
-        "left": "90.80%",
+        "left": "6%",
         "skin": "slFbox",
-        "top": "29.80%",
         "width": "20dp",
         "zIndex": 1
     }, {}, {});
@@ -257,7 +208,7 @@ function addWidgetsfrmHome() {
         "showProgressIndicator": true
     });
     LogoutCont.add(LogoutImg, BtnLogout);
-    flxHeader.add(flxsrch, imgLogo, lblTitle1, lblTitle2, SearchCont, ScanCont, LogoutCont);
+    flxHeader.add(flxsrch, imgLogo, lblTitle1, lblTitle2, SearchCont, LogoutCont);
     var flxSearch = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "clipBounds": false,
@@ -338,8 +289,8 @@ function addWidgetsfrmHome() {
     var tabHome = new kony.ui.TabPane({
         "activeSkin": "customNewActive",
         "activeTabs": [0],
-        "centerX": "50.06%",
-        "centerY": "53.03%",
+        "centerX": "50%",
+        "centerY": "53%",
         "height": "94%",
         "id": "tabHome",
         "inactiveSkin": "customNewInactive",
@@ -404,6 +355,14 @@ function addWidgetsfrmHome() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "data": [{
             "ButtonEnroll": "ENROLL",
+            "LikeImg": "like_icn.png",
+            "LikesCountlbl": "(12)",
+            "NoOfRatings": "(36)",
+            "Star1": "imagedrag.png",
+            "Star2": "imagedrag.png",
+            "Star3": "imagedrag.png",
+            "Star4": "imagedrag.png",
+            "Star5": "imagedrag.png",
             "imgComment": "comment.png",
             "imgEnroll": "enroll.png",
             "imgEvent": "bck.PNG",
@@ -425,6 +384,14 @@ function addWidgetsfrmHome() {
             "lblUpcoming": "UPCOMING"
         }, {
             "ButtonEnroll": "ENROLL",
+            "LikeImg": "imagedrag.png",
+            "LikesCountlbl": "Label",
+            "NoOfRatings": "Label",
+            "Star1": "imagedrag.png",
+            "Star2": "imagedrag.png",
+            "Star3": "imagedrag.png",
+            "Star4": "imagedrag.png",
+            "Star5": "imagedrag.png",
             "imgComment": "comment.png",
             "imgEnroll": "enroll.png",
             "imgEvent": "bck.PNG",
@@ -446,6 +413,14 @@ function addWidgetsfrmHome() {
             "lblUpcoming": "UPCOMING"
         }, {
             "ButtonEnroll": "ENROLL",
+            "LikeImg": "imagedrag.png",
+            "LikesCountlbl": "Label",
+            "NoOfRatings": "Label",
+            "Star1": "imagedrag.png",
+            "Star2": "imagedrag.png",
+            "Star3": "imagedrag.png",
+            "Star4": "imagedrag.png",
+            "Star5": "imagedrag.png",
             "imgComment": "comment.png",
             "imgEnroll": "enroll.png",
             "imgEvent": "bck.PNG",
@@ -492,9 +467,21 @@ function addWidgetsfrmHome() {
             "ButtonEnroll": "ButtonEnroll",
             "DateCont": "DateCont",
             "FlexContainer0a592a32577c646": "FlexContainer0a592a32577c646",
+            "LikeImg": "LikeImg",
+            "LikesCont": "LikesCont",
+            "LikesCountlbl": "LikesCountlbl",
             "LocationCont": "LocationCont",
+            "NoOfRatings": "NoOfRatings",
+            "RatingBar": "RatingBar",
+            "RatingCont": "RatingCont",
+            "Star1": "Star1",
+            "Star2": "Star2",
+            "Star3": "Star3",
+            "Star4": "Star4",
+            "Star5": "Star5",
             "StatusCont": "StatusCont",
             "TimeCont": "TimeCont",
+            "flexShodow": "flexShodow",
             "flxBottom": "flxBottom",
             "flxComment": "flxComment",
             "flxDesc": "flxDesc",
@@ -820,7 +807,56 @@ function addWidgetsfrmHome() {
     });
     tabMyEvent.add(IdentityCont, segMyEvents);
     tabHome.addTab("tabMyEvent", "My Event", null, tabMyEvent, null);
-    flxHome.add(flxHeader, flxSearch, tabHome);
+    var ScanCont = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerX": "85%",
+        "centerY": "90%",
+        "clipBounds": true,
+        "height": "70dp",
+        "id": "ScanCont",
+        "isVisible": true,
+        "layoutType": kony.flex.FREE_FORM,
+        "skin": "CopyslFbox0b966cb745a014a",
+        "width": "70dp",
+        "zIndex": 1
+    }, {}, {});
+    ScanCont.setDefaultUnit(kony.flex.DP);
+    var ScanImg = new kony.ui.Image2({
+        "centerX": "50%",
+        "centerY": "50%",
+        "height": "100%",
+        "id": "ScanImg",
+        "isVisible": true,
+        "skin": "slImage",
+        "src": "floating_btn.png",
+        "width": "100%",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var BtnScan = new kony.ui.Button({
+        "centerX": "50%",
+        "centerY": "50%",
+        "focusSkin": "CopyslButtonGlossBlue0f280a71a262d4b",
+        "height": "100%",
+        "id": "BtnScan",
+        "isVisible": true,
+        "onClick": AS_Button_fe2caa4491f24329881a2b674d03684c,
+        "skin": "CopyslButtonGlossBlue0f280a71a262d4b",
+        "width": "100%",
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "displayText": true,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {
+        "showProgressIndicator": true
+    });
+    ScanCont.add(ScanImg, BtnScan);
+    flxHome.add(flxHeader, flxSearch, tabHome, ScanCont);
     var flxComment = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",

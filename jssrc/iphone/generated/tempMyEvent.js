@@ -11,8 +11,8 @@ function initializetempMyEvent() {
     flxMyEvent.setDefaultUnit(kony.flex.DP);
     var ScheduleCont = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
-        "centerX": "50%",
-        "centerY": "50%",
+        "centerX": "49.33%",
+        "centerY": "50.36%",
         "clipBounds": true,
         "height": "100%",
         "id": "ScheduleCont",
@@ -32,9 +32,13 @@ function initializetempMyEvent() {
         "isVisible": true,
         "left": "5%",
         "skin": "CopyslLabel0530664e3f97947",
-        "text": "| | | | | | | | | | | | | | | | |",
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false,
+            "baseline": 0
+        },
         "top": "0%",
-        "width": "0.30%",
+        "width": "1dp",
         "zIndex": 1
     }, {
         "contentAlignment": constants.CONTENT_ALIGN_TOP_LEFT,
@@ -213,14 +217,14 @@ function initializetempMyEvent() {
     var CheckImg = new kony.ui.Image2({
         "centerX": "5.06%",
         "centerY": "49.65%",
-        "height": "13dp",
+        "height": "25dp",
         "id": "CheckImg",
         "isVisible": true,
         "left": "5.47%",
         "skin": "slImage",
         "src": "ovals.png",
         "top": "16dp",
-        "width": "13dp",
+        "width": "25dp",
         "zIndex": 1
     }, {
         "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,

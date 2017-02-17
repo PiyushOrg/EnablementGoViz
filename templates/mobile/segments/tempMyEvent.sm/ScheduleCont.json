@@ -37,11 +37,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "49.33%"
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "50.36%"
     },
     "children": [
         "lblSeparater",

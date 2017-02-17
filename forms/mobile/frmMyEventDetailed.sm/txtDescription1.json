@@ -45,7 +45,7 @@
     "contentalignment": 1,
     "id": "txtDescription1",
     "info": null,
-    "isvisible": true,
+    "isvisible": false,
     "keyboardstyle": "A",
     "keyboardtype": "A",
     "kuid": "421f65dd58344df3b5b88a873b2d4e53",

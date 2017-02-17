@@ -13,22 +13,6 @@
             "KUID": "0fa8fdfd25844c4082011f1911a46f02"
         },
         "language": "js",
-        "actions": [{
-            "id": "ADD_SNIPPET__b61cc9e1016a4c94b2cea3e57c08b662",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "setSegmentData();",
-            "parentId": null,
-            "callbackType": null,
-            "disabled": true
-        }, {
-            "id": "INVOKE_FUNCTION___68bbb78132aa45cda5c25baeddd05406",
-            "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "myEvents",
-            "display": "myEvents",
-            "inputparams": [],
-            "parentId": null,
-            "callbackType": null,
-            "disabled": false
-        }]
+        "actions": []
     }
 }

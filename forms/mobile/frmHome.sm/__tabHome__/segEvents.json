@@ -10,15 +10,15 @@
             },
             "LikeImg": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "like_icn.png"
             },
             "LikesCountlbl": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
+                "text": "(12)"
             },
             "NoOfRatings": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
+                "text": "(36)"
             },
             "Star1": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
@@ -450,6 +450,7 @@
         "Star5": "Star5",
         "StatusCont": "StatusCont",
         "TimeCont": "TimeCont",
+        "flexShodow": "flexShodow",
         "flxBottom": "flxBottom",
         "flxComment": "flxComment",
         "flxDesc": "flxDesc",

@@ -19,12 +19,6 @@
             "KUID": "0fa8fdfd25844c4082011f1911a46f02"
         },
         "language": "js",
-        "actions": [{
-            "id": "ADD_SNIPPET__cda8f56313904b728fd434b3ceaba952",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "kony.application.showLoadingScreen(\"loadskin\",\"LoadingScreen\",constants.\nLOADING_SCREEN_POSITION_ONLY_CENTER, false,true,{enableMenuKey:true, \nenableBackKey:true, progressIndicatorColor : \"ffffff77\"});\n\nmyEvents();\n\nkony.application.dismissLoadingScreen();",
-            "parentId": null,
-            "callbackType": null
-        }]
+        "actions": []
     }
 }

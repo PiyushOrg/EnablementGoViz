@@ -1,6 +1,6 @@
 {
     "createdVizVersion": "7.2.0",
-    "enableIdForAutomation": false,
+    "enableIdForAutomation": true,
     "watchos_longlooknotificationicon_42": "",
     "wap_android240_fontsize": "12",
     "mwaddrkey": "",
@@ -194,7 +194,7 @@
     },
     "wap_spaandroidtabhdpi_fontsize": "12",
     "nativeContainerProperties": {
-        "isModified": false,
+        "isModified": true,
         "isEnableJSContainer": false,
         "isEnableJSContainerAndroid": false,
         "isEnableJSContaineriOS": false

@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "59.20%"
+        "value": "1%"
     },
     "_margin_": [
         1,
@@ -24,10 +24,6 @@
     ],
     "_skin_": "sa4aa58f2e744be3bcfc0cd32d758974",
     "_text_": "GO",
-    "_top_": {
-        "type": "string",
-        "value": "22.50%"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -40,6 +36,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblTitle2",

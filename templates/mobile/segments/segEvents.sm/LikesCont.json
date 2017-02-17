@@ -26,12 +26,16 @@
     "_skin_": "s9148fbf72824907bbb72d2489c7c994",
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "15%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
+        "type": "string",
+        "value": "18%"
+    },
+    "centery": {
         "type": "string",
         "value": "50%"
     },
@@ -47,9 +51,9 @@
     "info": null,
     "isvisible": true,
     "kuid": "10eb642e535a4e4da49e3b56d29c1f5a",
-    "layouttype": 2,
+    "layouttype": 3,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxImg",
+    "parent": "flxBottom",
     "pf": "segEvents",
     "snapgridsize": 10,
     "snaptogrid": true,

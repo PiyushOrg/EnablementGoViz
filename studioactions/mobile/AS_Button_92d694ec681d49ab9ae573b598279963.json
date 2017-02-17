@@ -1,6 +1,6 @@
 {
-    "AS_Button_cdd402b9eaff4443b7b8b123201bd1d6": {
-        "id": "AS_Button_cdd402b9eaff4443b7b8b123201bd1d6",
+    "AS_Button_92d694ec681d49ab9ae573b598279963": {
+        "id": "AS_Button_92d694ec681d49ab9ae573b598279963",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -9,26 +9,18 @@
             "datatype": "collection",
             "name": "context"
         }],
-        "contextObj": {
-            "name": "segEvents",
-            "type": "templates",
-            "platform": "",
-            "KUID": "e6f7662f62f6468ca43c8742d187df8a"
-        },
         "language": "js",
         "actions": [{
-            "id": "ADD_SNIPPET__219fa61923cb4034a140575d9152a3ba",
+            "id": "ADD_SNIPPET_ide_onClick_6ccb000dc0eb49118e51f9a0ecf8c59e",
             "type": "ADD_SNIPPET",
             "codeSnippet": "",
-            "parentId": null,
             "callbackType": null
         }, {
-            "id": "INVOKE_FUNCTION___98c27036325542f099c978254b6b213f",
+            "id": "INVOKE_FUNCTION__ide_onClick_849ffc6cf0a34c7998bf933f934c2b10",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "eventID",
             "display": "eventID",
             "inputparams": [],
-            "parentId": null,
             "callbackType": null,
             "disabled": null
         }]

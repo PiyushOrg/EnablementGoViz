@@ -42,11 +42,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.06%"
+        "value": "50%"
     },
     "centery": {
         "type": "string",
-        "value": "53.03%"
+        "value": "53%"
     },
     "children": [
         "tabEvent",

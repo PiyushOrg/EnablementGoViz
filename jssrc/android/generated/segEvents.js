@@ -28,7 +28,7 @@ function initializesegEvents() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "19%",
+        "height": "15%",
         "id": "flxHeader",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
@@ -43,7 +43,7 @@ function initializesegEvents() {
         "height": "60%",
         "id": "lblEventName",
         "isVisible": true,
-        "left": "3%",
+        "left": "4%",
         "skin": "CopyslLabel00c79a2fc34c644",
         "text": "Kony Visualizer 8.2",
         "textStyle": {
@@ -62,7 +62,7 @@ function initializesegEvents() {
     var lblMax = new kony.ui.Label({
         "id": "lblMax",
         "isVisible": true,
-        "left": "16%",
+        "left": "14%",
         "right": 0,
         "skin": "CopyslLabel0d1da0de6521a4d",
         "text": "Points:",
@@ -100,11 +100,142 @@ function initializesegEvents() {
         "textCopyable": false
     });
     flxHeader.add(lblEventName, lblMax, lblScore);
+    var RatingCont = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerX": "50%",
+        "clipBounds": true,
+        "height": "12%",
+        "id": "RatingCont",
+        "isVisible": true,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
+        "left": 0,
+        "skin": "slFbox",
+        "top": "0dp",
+        "width": "100%",
+        "zIndex": 1
+    }, {}, {});
+    RatingCont.setDefaultUnit(kony.flex.DP);
+    var RatingBar = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerY": "50%",
+        "clipBounds": true,
+        "height": "95%",
+        "id": "RatingBar",
+        "isVisible": true,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
+        "left": "4%",
+        "skin": "slFbox",
+        "width": "45%",
+        "zIndex": 1
+    }, {}, {});
+    RatingBar.setDefaultUnit(kony.flex.DP);
+    var Star1 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "95%",
+        "id": "Star1",
+        "isVisible": true,
+        "left": "0dp",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "top": "47dp",
+        "width": "20%",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star2 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "95%",
+        "id": "Star2",
+        "isVisible": true,
+        "left": "0dp",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "top": "47dp",
+        "width": "20%",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star3 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "95%",
+        "id": "Star3",
+        "isVisible": true,
+        "left": "0dp",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "top": "47dp",
+        "width": "20%",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star4 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "95%",
+        "id": "Star4",
+        "isVisible": true,
+        "left": "0dp",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "top": "47dp",
+        "width": "20%",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var Star5 = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "95%",
+        "id": "Star5",
+        "isVisible": true,
+        "left": "0dp",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "top": "47dp",
+        "width": "20%",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    RatingBar.add(Star1, Star2, Star3, Star4, Star5);
+    var NoOfRatings = new kony.ui.Label({
+        "centerY": "50%",
+        "id": "NoOfRatings",
+        "isVisible": true,
+        "left": "1%",
+        "skin": "CopyslLabel0212b9c2591ac45",
+        "text": "(40)",
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        },
+        "width": kony.flex.USE_PREFFERED_SIZE,
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {
+        "textCopyable": false
+    });
+    RatingCont.add(RatingBar, NoOfRatings);
     var flxImg = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "46%",
+        "height": "45%",
         "id": "flxImg",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
@@ -150,12 +281,62 @@ function initializesegEvents() {
     }, {
         "textCopyable": false
     });
-    flxImg.add(imgEvent, lblEventID);
+    var LikesCont = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "bottom": "0%",
+        "centerX": "50%",
+        "clipBounds": true,
+        "height": "30%",
+        "id": "LikesCont",
+        "isVisible": true,
+        "layoutType": kony.flex.FREE_FORM,
+        "skin": "CopyslFbox09de0ef80f72a40",
+        "width": "100%",
+        "zIndex": 1
+    }, {}, {});
+    LikesCont.setDefaultUnit(kony.flex.DP);
+    var LikeImg = new kony.ui.Image2({
+        "centerY": "50%",
+        "height": "25dp",
+        "id": "LikeImg",
+        "isVisible": true,
+        "right": "12%",
+        "skin": "slImage",
+        "src": "imagedrag.png",
+        "width": "25dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var LikesCountlbl = new kony.ui.Label({
+        "centerY": "50%",
+        "id": "LikesCountlbl",
+        "isVisible": true,
+        "right": "2%",
+        "skin": "CopyslLabel0f997da76ff1f43",
+        "text": "(30)",
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        },
+        "width": kony.flex.USE_PREFFERED_SIZE,
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {
+        "textCopyable": false
+    });
+    LikesCont.add(LikeImg, LikesCountlbl);
+    flxImg.add(imgEvent, lblEventID, LikesCont);
     var flxBottom = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "35%",
+        "height": "30%",
         "id": "flxBottom",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
@@ -610,6 +791,6 @@ function initializesegEvents() {
         "textCopyable": false
     });
     FlexContainer0a592a32577c646.add(lblOngoing, lblCompleted, lblSeparator);
-    flxMain.add(flxHeader, flxImg, flxBottom, flxDesc, flxFooter, FlexContainer0a592a32577c646);
+    flxMain.add(flxHeader, RatingCont, flxImg, flxBottom, flxDesc, flxFooter, FlexContainer0a592a32577c646);
     flxEv.add(flxMain);
 }

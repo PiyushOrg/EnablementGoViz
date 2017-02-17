@@ -41,7 +41,6 @@
         "lblTitle1",
         "lblTitle2",
         "SearchCont",
-        "ScanCont",
         "LogoutCont"
     ],
     "clipbounds": true,
@@ -51,7 +50,7 @@
     "info": null,
     "isvisible": true,
     "kuid": "9d7704c5d7044b84b21a0e72460895ce",
-    "layouttype": 2,
+    "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxHome",
     "pf": "frmHome",

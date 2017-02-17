@@ -1,6 +1,6 @@
 {
-    "AS_FlexContainer_95998eaa8c64415e96a4f631adb6facc": {
-        "id": "AS_FlexContainer_95998eaa8c64415e96a4f631adb6facc",
+    "AS_FlexContainer_52c1d9260eb74539867ae72c92ec5c33": {
+        "id": "AS_FlexContainer_52c1d9260eb74539867ae72c92ec5c33",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -11,9 +11,9 @@
         }],
         "language": "js",
         "actions": [{
-            "id": "ADD_SNIPPET_ide_onClick_c85cb0254a84492fb8c310139b251b02",
+            "id": "ADD_SNIPPET_ide_onClick_320db0c2843341488a6b97decacb11df",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "open(\"flxEnroll\");\neventID();",
+            "codeSnippet": "open(\"flxComment\");",
             "callbackType": null
         }]
     }

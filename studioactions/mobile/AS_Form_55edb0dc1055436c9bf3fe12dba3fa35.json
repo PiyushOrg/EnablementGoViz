@@ -21,7 +21,7 @@
             "inputparams": [],
             "parentId": null,
             "callbackType": null,
-            "disabled": null
+            "disabled": true
         }, {
             "id": "INVOKE_FUNCTION___5be580fdc79243c8a91b595aa4401fbd",
             "type": "INVOKE_FUNCTION",

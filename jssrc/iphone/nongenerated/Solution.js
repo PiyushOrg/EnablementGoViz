@@ -14,9 +14,9 @@ function showeventsf() {
         var headers = {};
         var params = {};
         integrationObj.invokeOperation(operationName, headers, params, successCallBack1, failureCallBack1);
-        kony.application.showLoadingScreen("sknLoading", "Loading..", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, null);
-
-        function successCallBack1(res) {
+        //kony.application.showLoadingScreen("sknLoading","Loading..",constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true,null);
+        function successCallBack1(result) {
+            var res = result;
             kony.print("myString1");
             var obj = [];
             session = [];
@@ -47,7 +47,7 @@ function showeventsf() {
                 "lblScore": "max_score"
             };
             frmHome.tabHome.tabEvent.segEvents.setData(obj);
-            kony.application.dismissLoadingScreen();
+            //kony.application.dismissLoadingScreen();
             //myEvents();
         }
 
@@ -255,6 +255,26 @@ function refreshRanks() {
     if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
         var integrationObj = kony.sdk.getCurrentInstance().getIntegrationService("IntServ");
         var operationName = "refreshRanks";
+        var headers = {};
+        integrationObj.invokeOperation(operationName, headers, {}, successCallBackRefreshRanks, failureCallBackRefreshRanks);
+
+        function successCallBackRefreshRanks(res) {
+            //alert("Ranks refreshed");
+        }
+
+        function failureCallBackRefreshRanks(err) {
+            //alert("error"+JSON.stringify(err));
+            //alert("Successfully Enrolled");
+        }
+    } else {
+        alert("Device is offline");
+    }
+}
+
+function likes() {
+    if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
+        var integrationObj = kony.sdk.getCurrentInstance().getIntegrationService("IntServ");
+        var operationName = "getLikes";
         var headers = {};
         integrationObj.invokeOperation(operationName, headers, {}, successCallBackRefreshRanks, failureCallBackRefreshRanks);
 

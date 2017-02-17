@@ -16,6 +16,15 @@
             "parentId": null,
             "callbackType": null,
             "disabled": null
+        }, {
+            "id": "INVOKE_FUNCTION___db84327003fb41fbac69a9c78782e8a6",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "showeventsf",
+            "display": "showeventsf",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true
         }]
     }
 }

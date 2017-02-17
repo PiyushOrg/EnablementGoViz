@@ -48,6 +48,7 @@ function skinsInit() {
     CopyslFbox08bbf3addce9844 = "CopyslFbox08bbf3addce9844";
     CopyslFbox099be5b4588c047 = "CopyslFbox099be5b4588c047";
     CopyslFbox09c2e67aba1ce47 = "CopyslFbox09c2e67aba1ce47";
+    CopyslFbox09de0ef80f72a40 = "CopyslFbox09de0ef80f72a40";
     CopyslFbox0a291ea78784c46 = "CopyslFbox0a291ea78784c46";
     CopyslFbox0af118c6c1e854d = "CopyslFbox0af118c6c1e854d";
     CopyslFbox0b9eb0e6af5614a = "CopyslFbox0b9eb0e6af5614a";
@@ -87,6 +88,7 @@ function skinsInit() {
     CopyslLabel013b9c7a2354344 = "CopyslLabel013b9c7a2354344";
     CopyslLabel017459d0842b644 = "CopyslLabel017459d0842b644";
     CopyslLabel01ef66ed3e0e041 = "CopyslLabel01ef66ed3e0e041";
+    CopyslLabel0212b9c2591ac45 = "CopyslLabel0212b9c2591ac45";
     CopyslLabel027a67513bcb843 = "CopyslLabel027a67513bcb843";
     CopyslLabel02c66e97feb9c4d = "CopyslLabel02c66e97feb9c4d";
     CopyslLabel0319b4d3931a248 = "CopyslLabel0319b4d3931a248";
@@ -134,6 +136,7 @@ function skinsInit() {
     CopyslLabel0e1f2343ad3284b = "CopyslLabel0e1f2343ad3284b";
     CopyslLabel0ea636dcac4bc4d = "CopyslLabel0ea636dcac4bc4d";
     CopyslLabel0ee77d860fc7f4a = "CopyslLabel0ee77d860fc7f4a";
+    CopyslLabel0f997da76ff1f43 = "CopyslLabel0f997da76ff1f43";
     CopyslLabel0ff2529edc67243 = "CopyslLabel0ff2529edc67243";
     CopyslTab02ac065d26d144e = "CopyslTab02ac065d26d144e";
     CopyslTab08e36c3a2bfa841 = "CopyslTab08e36c3a2bfa841";

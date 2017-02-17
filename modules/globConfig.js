@@ -20,7 +20,7 @@ function initializeApp()
     sdkClient=new kony.sdk();
     sdkClient.init(key,secret,surl,function(response){
     //  login();
-      showeventsf();
+     // showeventsf();
     },function(err){
       alert("client init error "+JSON.stringify(err));
     });
