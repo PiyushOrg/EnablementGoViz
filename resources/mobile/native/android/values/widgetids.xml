@@ -32,21 +32,17 @@
   <item type="id" name="frmHome"/>
   <item type="id" name="flxHome"/>
   <item type="id" name="flxHeader"/>
-  <item type="id" name="flxsrch"/>
-  <item type="id" name="imgSrc"/>
   <item type="id" name="imgLogo"/>
   <item type="id" name="lblTitle1"/>
   <item type="id" name="lblTitle2"/>
   <item type="id" name="SearchCont"/>
   <item type="id" name="SearchImg"/>
-  <item type="id" name="BtnSearch"/>
   <item type="id" name="LogoutCont"/>
   <item type="id" name="LogoutImg"/>
   <item type="id" name="BtnLogout"/>
   <item type="id" name="flxSearch"/>
   <item type="id" name="txtEnter"/>
-  <item type="id" name="flxsrc"/>
-  <item type="id" name="imgCopySearch"/>
+  <item type="id" name="BtnCancelSearch"/>
   <item type="id" name="tabHome"/>
   <item type="id" name="tabEvent"/>
   <item type="id" name="segEvents"/>

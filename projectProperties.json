@@ -29,7 +29,7 @@
     "watchos_shortlooknotificationicon_42": "",
     "wap_spaandroidtab_fontsize": "12",
     "apppackagekey": "",
-    "startupformkey": "frmLogin",
+    "startupformkey": "frmHome",
     "accountCloudGuid": "bf40ec29-5db3-428f-b185-f18548ccbea6",
     "referenceWidth": "375",
     "wap_bb440_fontsize": "12",
@@ -194,7 +194,7 @@
     },
     "wap_spaandroidtabhdpi_fontsize": "12",
     "nativeContainerProperties": {
-        "isModified": true,
+        "isModified": false,
         "isEnableJSContainer": false,
         "isEnableJSContainerAndroid": false,
         "isEnableJSContaineriOS": false

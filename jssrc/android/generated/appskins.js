@@ -11,11 +11,13 @@ function skinsInit() {
     CopyslButtonGlossBlue057d96a193d1648 = "CopyslButtonGlossBlue057d96a193d1648";
     CopyslButtonGlossBlue05af6c63cd0374e = "CopyslButtonGlossBlue05af6c63cd0374e";
     CopyslButtonGlossBlue06d8588f958e748 = "CopyslButtonGlossBlue06d8588f958e748";
+    CopyslButtonGlossBlue075d652f893ad42 = "CopyslButtonGlossBlue075d652f893ad42";
     CopyslButtonGlossBlue0955e3e1506c941 = "CopyslButtonGlossBlue0955e3e1506c941";
     CopyslButtonGlossBlue0bacd52f84f9a4c = "CopyslButtonGlossBlue0bacd52f84f9a4c";
     CopyslButtonGlossBlue0e1b8b2daf18046 = "CopyslButtonGlossBlue0e1b8b2daf18046";
     CopyslButtonGlossBlue0e6fd04397ae241 = "CopyslButtonGlossBlue0e6fd04397ae241";
     CopyslButtonGlossBlue0f280a71a262d4b = "CopyslButtonGlossBlue0f280a71a262d4b";
+    CopyslButtonGlossRed054690b72972643 = "CopyslButtonGlossRed054690b72972643";
     CopyslFSbox02259c466840a45 = "CopyslFSbox02259c466840a45";
     CopyslFbox0075ffa25008f4f = "CopyslFbox0075ffa25008f4f";
     CopyslFbox00f9eaca5ece64b = "CopyslFbox00f9eaca5ece64b";
@@ -50,7 +52,9 @@ function skinsInit() {
     CopyslFbox09c2e67aba1ce47 = "CopyslFbox09c2e67aba1ce47";
     CopyslFbox09de0ef80f72a40 = "CopyslFbox09de0ef80f72a40";
     CopyslFbox0a291ea78784c46 = "CopyslFbox0a291ea78784c46";
+    CopyslFbox0a9758ed0c9ac40 = "CopyslFbox0a9758ed0c9ac40";
     CopyslFbox0af118c6c1e854d = "CopyslFbox0af118c6c1e854d";
+    CopyslFbox0b966cb745a014a = "CopyslFbox0b966cb745a014a";
     CopyslFbox0b9eb0e6af5614a = "CopyslFbox0b9eb0e6af5614a";
     CopyslFbox0ba7c872db6c448 = "CopyslFbox0ba7c872db6c448";
     CopyslFbox0bf90cafcf2ba43 = "CopyslFbox0bf90cafcf2ba43";

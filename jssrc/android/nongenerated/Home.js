@@ -41,3 +41,35 @@ function close(a) {
     });
     frmHome[a].isVisible = "false";
 }
+
+function filter() {
+    var data = "";
+    if (frmHome.flxHome.tabHome.segEvents.data !== null) {
+        data = frmHome.flxHome.tabHome.segEvents.data;
+        // alert("data is "+data);
+    } else {
+        data = eventData;
+        alert("eventdata is " + data);
+        if (null == data) {
+            return;
+        }
+    }
+    var str = frmHome.txtEnter.text;
+    var data1 = searchinJSON(data, str);
+    if (str === "" || str === null || data1 === null || data1 === "") {
+        frmHome.flxHome.tabHome.segEvents.setData(eventData);
+        return;
+    }
+    frmHome.flxHome.tabHome.segEvents.setData(data1);
+}
+
+function searchinJSON(data, str) {
+    var tempData = [];
+    // alert("inside data "+data);
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].name.toLowerCase().search(str.toLowerCase()) != -1) {
+            tempData.push(data[i]);
+        }
+    }
+    return tempData;
+}

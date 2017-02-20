@@ -36,13 +36,13 @@
         "value": "50%"
     },
     "children": [
-        "SearchImg",
-        "BtnSearch"
+        "SearchImg"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "SearchCont",
+    "ide_onClick": "AS_FlexContainer_d4c9f13705ec4deebf58e314bb5fea5d",
     "info": null,
     "isvisible": true,
     "kuid": "239ae824e04543228681b52cdb13ee63",

@@ -21,7 +21,16 @@
             "inputparams": [],
             "parentId": null,
             "callbackType": null,
-            "disabled": true
+            "disabled": false
+        }, {
+            "id": "INVOKE_FUNCTION___9eae8c56a9104f9ba4ecefe8bc659799",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "initializeApp",
+            "display": "initializeApp",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null
         }]
     }
 }

@@ -4,7 +4,11 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "90%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "84%"
     },
     "_margin_": [
         6,
@@ -18,16 +22,20 @@
         0,
         0
     ],
-    "_skin_": "sf029cf6386b4a2eaff905a1ecf613fe",
-    "_text_": "",
+    "_skin_": "s88699680b1e49968ef17a49cd0294d1",
+    "_text_": "Cancel",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "15%"
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "90%"
     },
     "centery": {
         "type": "string",
@@ -36,13 +44,14 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sf029cf6386b4a2eaff905a1ecf613fe",
-    "id": "BtnSearch",
+    "focusskin": "s32245351639489a81c5313165d41d60",
+    "id": "BtnCancelSearch",
+    "ide_onClick": "AS_Button_22a6c2fb683b4f3199859b6a4624280d",
     "info": null,
     "isvisible": true,
-    "kuid": "43069bab15e3496e98ff286e3fe263c2",
+    "kuid": "1aeb2c3c26f54e2b9f4f2fa802e9987c",
     "name": "kony.ui.Button",
-    "parent": "SearchCont",
+    "parent": "flxSearch",
     "pf": "frmHome",
     "wType": "Button",
     "zindex": 1

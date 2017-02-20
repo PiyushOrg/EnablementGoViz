@@ -103,6 +103,7 @@ function frmLoginGlobals() {
         "id": "frmLogin",
         "layoutType": kony.flex.FREE_FORM,
         "needAppMenu": true,
+        "postShow": AS_Form_09a8ff578ca04620956942e05b106af0,
         "preShow": AS_Form_55edb0dc1055436c9bf3fe12dba3fa35,
         "skin": "slForm"
     }, {

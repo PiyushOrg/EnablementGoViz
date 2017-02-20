@@ -4,9 +4,11 @@ var error;
 var eventId;
 var arr=[];
 var scanID,session_name;
+var eventData=[];
 
 function showeventsf()
 {
+  //alert("event called")
   if(kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)){
     kony.print("myString");
     var integrationObj = kony.sdk.getCurrentInstance().getIntegrationService("IntServ");
@@ -19,8 +21,8 @@ function showeventsf()
     function successCallBack1(result){
       var res = result;
       kony.print("myString1");
-      var obj=[];
-      session=[];
+      eventData=[];
+      
       //       alert("success"+JSON.stringify(res));
       //       alert(res);
       //       alert(JSON.stringify(res));
@@ -28,7 +30,7 @@ function showeventsf()
       //frmEventDetail.ScheduleSeg.removeAll();
       for(var i=0 ; i<res.result.length;i++)
       {
-        obj.push({"location":res.result[i].location,"event_id":res.result[i].event_id,"name":res.result[i].name,"max_score":res.result[i].max_score,"description":res.result[i].description});
+        eventData.push({"location":res.result[i].location,"event_id":res.result[i].event_id,"name":res.result[i].name,"max_score":res.result[i].max_score,"description":res.result[i].description});
         event.push(res.result[i].event_id);
         session.push({"sessions":res.result[i].sessions});
       }
@@ -37,8 +39,8 @@ function showeventsf()
       //frmHome.tabHome.tabMyEvent.segMyEvents.setData(obj);
 
       frmHome.tabHome.tabEvent.segEvents.widgetDataMap = {"lblLocation":"location","lblEventName":"name","lblDescription":"description","lblScore":"max_score"};
-      frmHome.tabHome.tabEvent.segEvents.setData(obj);
-      //kony.application.dismissLoadingScreen();
+      frmHome.tabHome.tabEvent.segEvents.setData(eventData);
+     // kony.application.dismissLoadingScreen();
       //myEvents();
     }
     function failureCallBack1(err){
@@ -82,7 +84,7 @@ function enroll(eventId)
 function eventEnroll()
 {
 
-  eventId=frmHome.segEvents.selectedItems[0].event_id;
+  eventId=frmHome.tabHome.segEvents.selectedItems[0].event_id;
   //alert("event id "+eventId);
   enroll(eventId);
 
@@ -138,6 +140,7 @@ function eventDetail()
     var row=frmHome.segEvents.selectedRowIndex[1]; 
     var i=" "+parseInt(row);
     var x=i.trim();
+    //alert(row);
     frmEventDetail.ScheduleSeg.widgetDataMap = {"lblStageName":"session_name"};
     frmEventDetail.ScheduleSeg.setData(session[x].sessions);
     //frmEventDetail.btnEnroll.
@@ -270,10 +273,10 @@ function refreshRanks(){
     integrationObj.invokeOperation(operationName, headers, {}, successCallBackRefreshRanks, failureCallBackRefreshRanks);
 
     function successCallBackRefreshRanks(res){ 
-      //alert("Ranks refreshed");
+      alert("Ranks refreshed");
     }
     function failureCallBackRefreshRanks(err){
-      //alert("error"+JSON.stringify(err));
+      alert("error"+JSON.stringify(err));
       //alert("Successfully Enrolled");
     }
   }else{

@@ -10,10 +10,55 @@ var appConfig = {
     secureServerPort: "443",
     isDebug: true,
     middlewareContext: "enablementGoViz",
-    isMFApp: false,
+    isturlbase: "https://mobilefabric-demo.konycloud.com/services",
+    isMFApp: true,
+    appKey: "122c07164e6f6cea1ea42b6c3d7304f0",
+    appSecret: "df66163ed9b0f12a08fde05fd32304f6",
+    serviceUrl: "https://100003520.auth.konycloud.com/appconfig",
+    svcDoc: {
+        "appId": "bc26a189-1654-40ff-bd65-01da567e8697",
+        "baseId": "9d23ebaf-5f61-4b1b-85ec-ad84766fe353",
+        "name": "EnablementGo",
+        "selflink": "https://100003520.auth.konycloud.com/appconfig",
+        "login": [{
+            "type": "oauth2",
+            "prov": "MSLogin",
+            "url": "https://100003520.auth.konycloud.com",
+            "alias": "MSLogin"
+        }, {
+            "type": "saml",
+            "prov": "MsActiveDir",
+            "url": "https://100003520.auth.konycloud.com",
+            "alias": "MsActiveDir"
+        }],
+        "messagingsvc": {
+            "appId": "bc26a189-1654-40ff-bd65-01da567e8697",
+            "url": "https://mobilefabric-demo.messaging.konycloud.com/api/v1"
+        },
+        "integsvc": {
+            "IntServ": "https://mobilefabric-demo.konycloud.com/services/IntServ",
+            "IntServDummy": "https://mobilefabric-demo.konycloud.com/services/IntServDummy"
+        },
+        "reportingsvc": {
+            "custom": "https://mobilefabric-demo.konycloud.com/services/CMS",
+            "session": "https://mobilefabric-demo.konycloud.com/services/IST"
+        },
+        "services_meta": {
+            "IntServ": {
+                "version": "1.0",
+                "url": "https://mobilefabric-demo.konycloud.com/services/IntServ",
+                "type": "integsvc"
+            },
+            "IntServDummy": {
+                "version": "1.0",
+                "url": "https://mobilefabric-demo.konycloud.com/services/IntServDummy",
+                "type": "integsvc"
+            }
+        }
+    },
     eventTypes: ["FormEntry", "ServiceRequest", "Error", "Crash"],
-    url: null,
-    secureurl: null
+    url: "https://mobilefabric-demo.konycloud.com/enablementGoViz/MWServlet",
+    secureurl: "https://mobilefabric-demo.konycloud.com/enablementGoViz/MWServlet"
 };
 sessionID = "";
 
@@ -49,7 +94,7 @@ function themeCallBack() {
         init: appInit,
         postappinit: AS_AppEvents_ee86c84e5b134efd8546ebad61c19c23,
         showstartupform: function() {
-            frmLogin.show();
+            frmHome.show();
         }
     });
 };
@@ -62,9 +107,12 @@ function loadResources() {
     sdkInitConfig = {
         "appConfig": appConfig,
         "isMFApp": appConfig.isMFApp,
+        "appKey": appConfig.appKey,
+        "appSecret": appConfig.appSecret,
         "eventTypes": appConfig.eventTypes,
+        "serviceUrl": appConfig.serviceUrl
     }
-    kony.theme.setCurrentTheme("default", themeCallBack, themeCallBack);
+    kony.setupsdks(sdkInitConfig, onSuccessSDKCallBack, onSuccessSDKCallBack);
 };
 
 function onSuccessSDKCallBack() {

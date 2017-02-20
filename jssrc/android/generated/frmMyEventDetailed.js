@@ -187,7 +187,7 @@ function addWidgetsfrmMyEventDetailed() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "16%",
+        "height": "24%",
         "id": "CopyflxBack0609409ffb19542",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
@@ -515,10 +515,9 @@ function addWidgetsfrmMyEventDetailed() {
     });
     PointsCont.add(lblPointsName, lblPoints);
     var ContDescription = new kony.ui.FlexContainer({
-        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "25%",
         "id": "ContDescription",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_VERTICAL,
@@ -553,7 +552,7 @@ function addWidgetsfrmMyEventDetailed() {
         "autoCapitalize": constants.TEXTAREA_AUTO_CAPITALIZE_NONE,
         "centerX": "50%",
         "id": "txtDescription1",
-        "isVisible": true,
+        "isVisible": false,
         "keyBoardStyle": constants.TEXTAREA_KEY_BOARD_STYLE_DEFAULT,
         "numberOfVisibleLines": 3,
         "skin": "TextBoxSkin",
@@ -612,7 +611,7 @@ function addWidgetsfrmMyEventDetailed() {
     var lblSchedule = new kony.ui.Label({
         "id": "lblSchedule",
         "isVisible": true,
-        "left": "4%",
+        "left": "3%",
         "skin": "CopyslLabel00f5738a0d4ee4b",
         "text": "Schedule :",
         "textStyle": {

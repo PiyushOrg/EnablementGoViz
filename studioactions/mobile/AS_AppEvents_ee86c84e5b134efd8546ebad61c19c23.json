@@ -8,15 +8,6 @@
         }],
         "language": "js",
         "actions": [{
-            "id": "INVOKE_FUNCTION___14c81d18de8e463cbcd9e2a3d95036c7",
-            "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "postAppInit",
-            "display": "postAppInit",
-            "inputparams": [],
-            "parentId": null,
-            "callbackType": null,
-            "disabled": null
-        }, {
             "id": "INVOKE_FUNCTION___db84327003fb41fbac69a9c78782e8a6",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "showeventsf",
@@ -25,6 +16,15 @@
             "parentId": null,
             "callbackType": null,
             "disabled": true
+        }, {
+            "id": "INVOKE_FUNCTION___14c81d18de8e463cbcd9e2a3d95036c7",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "postAppInit",
+            "display": "postAppInit",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null
         }]
     }
 }
