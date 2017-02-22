@@ -24,7 +24,7 @@
             "inputparams": [],
             "parentId": null,
             "callbackType": null,
-            "disabled": null
+            "disabled": true
         }]
     }
 }

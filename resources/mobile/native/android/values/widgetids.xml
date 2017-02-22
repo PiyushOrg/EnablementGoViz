@@ -158,15 +158,16 @@
   <item type="id" name="CopyflxMyEvent0db10d8d616a84e"/>
   <item type="id" name="ScheduleCont"/>
   <item type="id" name="lblSeparater"/>
-  <item type="id" name="lblSep2"/>
+  <item type="id" name="CkeckBox"/>
+  <item type="id" name="CheckImg"/>
   <item type="id" name="flxMyEventDetail"/>
   <item type="id" name="lblStageName"/>
-  <item type="id" name="Label08b194af0dc3d41"/>
+  <item type="id" name="descrpition"/>
   <item type="id" name="DateNTimeCont"/>
   <item type="id" name="lblDateName"/>
   <item type="id" name="Linelbl"/>
-  <item type="id" name="CkeckBox"/>
-  <item type="id" name="CheckImg"/>
   <item type="id" name="tempMyEvent"/>
   <item type="id" name="flxMyEvent"/>
+  <item type="id" name="lblSep2"/>
+  <item type="id" name="Label08b194af0dc3d41"/>
 </resources>

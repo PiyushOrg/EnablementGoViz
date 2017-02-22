@@ -30,11 +30,14 @@
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "ADD_SNIPPET__9460a652bb034ff7828879c207aef804",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "eventDetail();",
+            "id": "INVOKE_FUNCTION___3c492e98ada543cbad6c375751bd78bb",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "eventDetail",
+            "display": "eventDetail",
+            "inputparams": [],
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": null
         }]
     }
 }

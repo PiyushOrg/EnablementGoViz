@@ -6,6 +6,10 @@
         "type": "ref",
         "value": "preferred"
     },
+    "_left_": {
+        "type": "string",
+        "value": "1%"
+    },
     "_margin_": [
         1,
         1,
@@ -18,8 +22,8 @@
         0,
         0
     ],
-    "_skin_": "sc9c5c16c0514edd8ecc6076bf870f95",
-    "_text_": "Date : ",
+    "_skin_": "s8d783b77bf145579e21b22abc7f7fc0",
+    "_text_": "Demo of installation steps",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -35,7 +39,7 @@
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblDateName",
+    "id": "descrpition",
     "info": null,
     "ipad": {
         "psp": {
@@ -48,9 +52,9 @@
         }
     },
     "isvisible": true,
-    "kuid": "204c04ceb2ad4a45bbb0b680b1a1cb42",
+    "kuid": "957cb43613534eb5b3be9c19e219c1db",
     "name": "kony.ui.Label",
-    "parent": "DateNTimeCont",
+    "parent": "flxMyEventDetail",
     "pf": "tempEventDetails",
     "tooltip": "",
     "wType": "Label",

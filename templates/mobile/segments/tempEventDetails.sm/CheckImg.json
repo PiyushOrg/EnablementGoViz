@@ -9,7 +9,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "8.47%"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -34,19 +34,11 @@
         "value": "13dp"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "10.39%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50.76%"
-    },
     "containerId": true,
     "containerweight": 100,
     "context": {
         "channel": "mobile",
-        "platform": "iphone",
+        "formID": "tempEventDetails",
         "templateType": "segments",
         "topLevelBox": null
     },

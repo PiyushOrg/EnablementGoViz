@@ -26,11 +26,11 @@
     "_text_": "Session - 1",
     "_top_": {
         "type": "string",
-        "value": "35%"
+        "value": "0dp"
     },
     "_width_": {
-        "type": "string",
-        "value": "90%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {

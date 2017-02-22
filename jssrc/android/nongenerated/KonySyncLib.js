@@ -1,5 +1,5 @@
 // -- SDK File : KonySyncLib.js 
-//  --Generated On Tue Oct 18 17:17:27 IST 2016******************* 
+//  --Generated On Mon Jan 16 17:26:54 IST 2017******************* 
 //  **************** Start jsonWriter.js*******************
 if (typeof(kony.sync) === "undefined") {
     kony.sync = {};
@@ -208,11 +208,29 @@ sync.startSession = function(config) {
         if (!kony.sync.isNullOrUndefined(serverResponse.opstatus) && serverResponse.opstatus !== 0) {
             if (!kony.sync.isNullOrUndefined(serverResponse.d)) {
                 sync.log.error("Register Device Response : ", serverResponse);
-                kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse.d));
+                try {
+                    kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse.d));
+                } catch (e) {
+                    sync.log.error("Unknown error occurred during client callbacks in either stop callback or sync error callback", e);
+                }
+                if (kony.sync.isSyncStopped) {
+                    sync.log.debug("sync stopped after device registration failed in function registerDeviceCallback");
+                    kony.sync.stopSyncSession();
+                    return;
+                }
                 kony.sync.isSessionInProgress = false;
             } else {
                 sync.log.error("Register Device Response : ", serverResponse);
-                kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse));
+                try {
+                    kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse));
+                } catch (e) {
+                    sync.log.error("Unknown error occurred during client callbacks in either stop callback or sync error callback", e);
+                }
+                if (kony.sync.isSyncStopped) {
+                    sync.log.debug("sync stopped after device registration failed in function registerDeviceCallback");
+                    kony.sync.stopSyncSession();
+                    return;
+                }
                 kony.sync.isSessionInProgress = false;
             }
             kony.sync.httprequestsinglesession = false;
@@ -222,12 +240,30 @@ sync.startSession = function(config) {
             registerSuccess = false;
             kony.sync.isSessionInProgress = false;
             kony.sync.httprequestsinglesession = false;
-            kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse));
+            try {
+                kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse));
+            } catch (e) {
+                sync.log.error("Unknown error occurred during client callbacks in either stop callback or sync error callback", e);
+            }
+            if (kony.sync.isSyncStopped) {
+                sync.log.debug("sync stopped after device registration failed in function registerDeviceCallback");
+                kony.sync.stopSyncSession();
+                return;
+            }
             return;
         }
         if ((serverResponse.d.error === "true")) {
             sync.log.error("Register Device Response : ", serverResponse);
-            kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse.d));
+            try {
+                kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getServerError(serverResponse.d));
+            } catch (e) {
+                sync.log.error("Unknown error occurred during client callbacks in either stop callback or sync error callback", e);
+            }
+            if (kony.sync.isSyncStopped) {
+                sync.log.debug("sync stopped after device registration failed in function registerDeviceCallback");
+                kony.sync.stopSyncSession();
+                return;
+            }
             kony.sync.isSessionInProgress = false;
             kony.sync.httprequestsinglesession = false;
             registerSuccess = false;
@@ -372,11 +408,29 @@ kony.sync.validateScopeSession = function(abortSync, syncErrorObject) {
                 kony.sync.performOnlySchemaUpgrade = false;
                 sync.log.trace("kony.sync.validateScopeSession->calling onSyncSuccess function");
                 kony.sync.schemaUpgradeDownloadPending = false;
-                kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncSuccess], kony.sync.currentSyncReturnParams);
+                try {
+                    kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncSuccess], kony.sync.currentSyncReturnParams);
+                } catch (e) {
+                    sync.log.error("Unknown error occurred during client callbacks in either stop callback or sync errpr callback", e);
+                }
+                if (kony.sync.isSyncStopped) {
+                    sync.log.debug("sync stopped after sync sucess in function validateScopeSession");
+                    kony.sync.stopSyncSession();
+                    return;
+                }
             } else {
                 sync.log.error("kony.sync.validateScopeSession->calling onSyncError function");
                 kony.sync.isSessionInProgress = false;
-                kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getErrorTable(kony.sync.errorCodeSyncError, kony.sync.getErrorMessage(kony.sync.errorCodeSyncError), kony.sync.syncErrorMessage));
+                try {
+                    kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onSyncError], kony.sync.getErrorTable(kony.sync.errorCodeSyncError, kony.sync.getErrorMessage(kony.sync.errorCodeSyncError), kony.sync.syncErrorMessage));
+                } catch (e) {
+                    sync.log.error("Unknown error occurred during client callbacks in either stop callback or sync errpr callback", e);
+                }
+                if (kony.sync.isSyncStopped) {
+                    sync.log.debug("sync stopped after sync error in function validateScopeSession");
+                    kony.sync.stopSyncSession();
+                    return;
+                }
             }
             kony.sync.httprequestsinglesession = false;
             return; // Sync Completes here.
@@ -629,7 +683,11 @@ sync.stopSession = function(callback) {
 kony.sync.stopSyncSession = function() {
     kony.sync.isSyncStopped = false;
     kony.sync.globalIsDownloadStarted = true;
-    kony.sync.verifyAndCallClosure(kony.sync.onSyncStop);
+    try {
+        kony.sync.verifyAndCallClosure(kony.sync.onSyncStop);
+    } catch (e) {
+        sync.log.error("Unknown error occurred during stop callback", e);
+    }
 };
 //  **************** End KonySyncAPI.js*******************
 //  **************** Start KonySyncBinaryDataManager.js*******************
@@ -642,6 +700,15 @@ if (typeof(kony.sync) === "undefined") {
 if (typeof(sync) === "undefined") {
     sync = {};
 }
+kony.sync.isValidChunkSize = function(chunkSize) {
+    if (typeof(chunkSize) !== "number") {
+        return false;
+    }
+    if (chunkSize <= 0) {
+        return false;
+    }
+    return true;
+};
 
 function validateBinaryOperationParameters(tableName, columnName) {
     var error = null;
@@ -669,15 +736,24 @@ kony.sync.createDownloadTask = function(dbname, tableName, columnName, primaryKe
     sync.log.trace("after validation pks are " + JSON.stringify(primaryKeyTable));
     if (!kony.sync.isNullOrUndefined(primaryKeyTable)) {
         var downloadConfig = {};
-        if (config.hasOwnProperty("ChunkSize")) {
-            downloadConfig.ChunkSize = config.ChunkSize;
-        }
-        if (config.hasOwnProperty("NetworkTimeout")) {
-            downloadConfig.NetworkTimeout = config.NetworkTimeout;
+        if (!kony.sync.isNullOrUndefined(config)) {
+            sync.log.trace("kony.sync.createDownloadTask - config is passed to the download request ", config);
+            if (config.hasOwnProperty("ChunkSize")) {
+                var chunkSize = config.ChunkSize;
+                if (kony.sync.isValidChunkSize(chunkSize)) {
+                    downloadConfig.ChunkSize = config.ChunkSize;
+                } else {
+                    error = kony.sync.getErrorTable(kony.sync.errorCodeInvalidChunkSize, kony.sync.getErrorMessage(kony.sync.errorCodeInvalidChunkSize, chunkSize));
+                    kony.sync.verifyAndCallClosure(errorCallback, error);
+                    return;
+                }
+            }
+            if (config.hasOwnProperty("NetworkTimeout")) {
+                downloadConfig.NetworkTimeout = config.NetworkTimeout;
+            }
         }
         var scopeName = kony.sync.scopes.syncTableScopeDic[tableName];
-        var binaryUrl = kony.sync.getServerURL();
-        downloadConfig.URL = binaryUrl;
+        downloadConfig.URL = kony.sync.getServerURL();
         downloadConfig.ScopeName = scopeName;
         downloadConfig.ResponseType = "Binary";
         downloadConfig.RequestMethod = "GET";
@@ -740,6 +816,40 @@ kony.sync.startDownload = function(downloadID, successCallback, errorCallback) {
         }
     }
 };
+kony.sync.pauseDownload = function(downloadID, successCallback, errorCallback) {
+    sync.log.trace("Entering kony.sync.pauseDownload for downloadID " + downloadID);
+    var error;
+    if (downloadID === null || typeof(downloadID) != "string") {
+        sync.log.trace("kony.sync.pauseDownload -> downloadID is invalid " + downloadID);
+        error = kony.sync.getErrorTable(kony.sync.errorCodeNullDownloadID, kony.sync.getErrorMessage(kony.sync.errorCodeNullDownloadID));
+        kony.sync.verifyAndCallClosure(errorCallback, error);
+    } else {
+        if (typeof(binarydata) !== "undefined") {
+            binarydata.pauseDownload(downloadID, successCallback, errorCallback);
+        } else {
+            sync.log.error("FFI is not configured to use Binary Apis");
+            error = kony.sync.getErrorTable(kony.sync.errorCodeBinaryDataFFINotConfigured, kony.sync.getErrorMessage(kony.sync.errorCodeBinaryDataFFINotConfigured));
+            kony.sync.verifyAndCallClosure(errorCallback, error);
+        }
+    }
+};
+kony.sync.resumeDownload = function(downloadID, successCallback, errorCallback) {
+    sync.log.trace("Entering kony.sync.resumeDownload for downloadID " + downloadID);
+    var error;
+    if (downloadID === null || typeof(downloadID) != "string") {
+        sync.log.trace("kony.sync.resumeDownload -> downloadID is invalid " + downloadID);
+        error = kony.sync.getErrorTable(kony.sync.errorCodeNullDownloadID, kony.sync.getErrorMessage(kony.sync.errorCodeNullDownloadID));
+        kony.sync.verifyAndCallClosure(errorCallback, error);
+    } else {
+        if (typeof(binarydata) !== "undefined") {
+            binarydata.resumeDownload(downloadID, successCallback, errorCallback);
+        } else {
+            sync.log.error("FFI is not configured to use Binary Apis");
+            error = kony.sync.getErrorTable(kony.sync.errorCodeBinaryDataFFINotConfigured, kony.sync.getErrorMessage(kony.sync.errorCodeBinaryDataFFINotConfigured));
+            kony.sync.verifyAndCallClosure(errorCallback, error);
+        }
+    }
+};
 kony.sync.getBinaryDataFilePath = function(databaseName, tableName, binaryColumnName, primaryKeyTable, successCallback, errorCallback) {
     //perform validations..
     var error = validateBinaryOperationParameters(tableName, binaryColumnName);
@@ -766,8 +876,6 @@ kony.sync.getBinaryDataFilePath = function(databaseName, tableName, binaryColumn
     }
 };
 kony.sync.getBinary = function(dbname, tableName, binaryColumnName, primaryKeyTable, config, successCallback, errorCallback) {
-    sync.log.trace("kony.sync.getBinary.. checking if file exists..");
-
     function createTaskSuccess(downloadResult) {
         sync.log.trace("kony.sync.getBinary .. create task success with downloadID ", downloadResult);
         kony.sync.startDownload(downloadResult.BlobID, successCallback, errorCallback);
@@ -793,6 +901,7 @@ kony.sync.getBinary = function(dbname, tableName, binaryColumnName, primaryKeyTa
             kony.sync.verifyAndCallClosure(errorCallback, error);
         }
     }
+    sync.log.trace("kony.sync.getBinary.. checking if file exists..");
     kony.sync.getBinaryDataFilePath(dbname, tableName, binaryColumnName, primaryKeyTable, getBinaryFileSuccess, getBinaryFileFailure);
 };
 //  **************** End KonySyncBinaryDataManager.js*******************
@@ -830,6 +939,11 @@ kony.sync.blobManager.UPLOAD_ACCEPTED = 71;
 kony.sync.blobManager.UPLOAD_FAILED = 73;
 kony.sync.blobManager.UPLOAD_IN_PROGRESS = 74;
 kony.sync.blobManager.NO_OPERATION = 50;
+//Binary Chunking states.
+kony.sync.blobManager.DOWNLOAD_NOT_STARTED = 101;
+kony.sync.blobManager.DOWNLOAD_STARTED = 102;
+kony.sync.blobManager.DOWNLOAD_FAIL = 103;
+kony.sync.blobManager.DOWNLOAD_PAUSED = 104;
 kony.sync.blobManager.ONDEMAND_FETCH_LIMIT = 10;
 kony.sync.blobManager.ONDEMAND_FETCH_OFFSET = 0;
 //defining state messages..
@@ -848,6 +962,11 @@ kony.sync.blobManager.states[kony.sync.blobManager.NO_OPERATION] = "Blob record 
 kony.sync.blobManager.states[kony.sync.blobManager.UPLOAD_ACCEPTED] = "Upload Request added to the queue";
 kony.sync.blobManager.states[kony.sync.blobManager.UPLOAD_IN_PROGRESS] = "Upload Operation In progress";
 kony.sync.blobManager.states[kony.sync.blobManager.UPLOAD_FAILED] = "Upload Operation Failed";
+//binary chunking state messages
+kony.sync.blobManager.states[kony.sync.blobManager.DOWNLOAD_NOT_STARTED] = "Download request added to the queue";
+kony.sync.blobManager.states[kony.sync.blobManager.DOWNLOAD_FAIL] = "Download Operation Failed";
+kony.sync.blobManager.states[kony.sync.blobManager.DOWNLOAD_STARTED] = "Download Operation in Process";
+kony.sync.blobManager.states[kony.sync.blobManager.DOWNLOAD_PAUSED] = "Download request is paused";
 //  **************** End KonySyncBlobConstants.js*******************
 //  **************** Start KonySyncBlobStoreManager.js*******************
 //  **************** Start BlobStoreManager.js*******************
@@ -2687,6 +2806,7 @@ kony.sync.downloadChunks = function(url, serviceParams, payloadId, chunkCount, h
     var infoObj = {};
     var chunkMap;
     var i = null;
+    var areAllChunksDownloaded = true; //flag to check if all the chunks are downloaded,
     //process first chunk if chunking is not resumed from an earlier point
     sync.log.trace("kony.sync.downloadChunks isResumed ", isResumed);
     if (!isResumed) {
@@ -2711,6 +2831,7 @@ kony.sync.downloadChunks = function(url, serviceParams, payloadId, chunkCount, h
         i = 1;
         for (callNo = 1; callNo <= chunkCount; callNo++) {
             if (chunkMap[callNo] === 0) {
+                areAllChunksDownloaded = false; //all the chunks are not downloaded. Disabling the flag.
                 infoObj[kony.sync.chunkNoKey] = callNo;
                 serviceParams[kony.sync.chunkNoKey] = callNo;
                 kony.sync.callOnChunkStart(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], callNo, serviceParams);
@@ -2726,6 +2847,7 @@ kony.sync.downloadChunks = function(url, serviceParams, payloadId, chunkCount, h
         }
     } else {
         for (callNo = 2; callNo <= chunkCount; callNo++) {
+            areAllChunksDownloaded = false; //all the chunks are not downloaded. disabling the flag.
             infoObj[kony.sync.chunkNoKey] = callNo;
             serviceParams[kony.sync.chunkNoKey] = callNo;
             kony.sync.callOnChunkStart(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], callNo, serviceParams);
@@ -2737,6 +2859,11 @@ kony.sync.downloadChunks = function(url, serviceParams, payloadId, chunkCount, h
                 break;
             }
         }
+    }
+    //All the chunks have been downloaded. Start processing them
+    if (areAllChunksDownloaded === true) {
+        sync.log.trace("kony.sync.downloadChunks -> All the chunks are downloaded.. Starting the processing");
+        kony.sync.getChunksFromDB(payloadId, chunkCount, kony.sync.currentScope[kony.sync.scopeName], chunkDataProcessCallback);
     }
 
     function downloadNetworkCallbackStatus(status, result, info) {
@@ -2760,68 +2887,90 @@ kony.sync.downloadChunks = function(url, serviceParams, payloadId, chunkCount, h
         }
     }
 
+    function isChunkPayloadIdInvalid(result) {
+        sync.log.trace("Entering isChunkPayloadIdInvalid");
+        if (!kony.sync.isNullOrUndefined(result) && !kony.sync.isNullOrUndefined(result.d)) {
+            if ((result.d.error === "true") && (result.d.errcode === kony.sync.servercodes.chunkPayloadIdInvalid)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function clearChunkMetaDataAndAllChunksSuccessCallback() {
+        sync.log.trace("Entering clearChunkMetaDataAndAllChunksSuccessCallback");
+        kony.sync.syncDownloadChanges(kony.sync.currentScope[kony.sync.scopeName], kony.sync.currentScope[kony.sync.scopeDataSource], kony.sync.downloadCompletedCallback);
+    }
+
+    function clearChunkMetaDataAndAllChunksErrorCallback(error) {
+        sync.log.trace("Entering clearChunkMetaDataAndAllChunksErrorCallback");
+        kony.sync.downloadFailed(error);
+    }
+
     function downloadNetworkCallback(result, info) {
         sync.log.trace("Entering kony.sync.downloadChunks->downloadNetworkCallback with result " + JSON.stringify(result) + " " + "info -> ", info);
         serverParams[kony.sync.hostName] = kony.sync.getServerDetailsHostName(result);
         serverParams[kony.sync.ipAddress] = kony.sync.getServerDetailsIpAddress(result);
-        sync.log.trace("downloadNetworkCallback isResumed " + isResumed + " for callNo " + callNo + " withChunkMap ", chunkMap);
-        if (callNo <= chunkCount) {
-            if (!isResumed) {
-                if (callNo !== 0) {
-                    infoObj[kony.sync.chunkNoKey] = callNo;
-                    serviceParams[kony.sync.chunkNoKey] = callNo;
-                    kony.sync.callOnChunkStart(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], callNo, serviceParams);
-                    sync.log.info("Hitting the service with URL :" + url + " with params:", serviceParams);
-                    retries = kony.sync.currentSyncConfigParams[kony.sync.numberOfRetriesKey];
-                    kony.sync.invokeServiceAsync(url, serviceParams, downloadNetworkCallbackStatus, infoObj);
-                    callNo++;
-                }
-            } else {
-                for (; callNo <= chunkCount; callNo++) {
-                    if (chunkMap[callNo] === 0) {
+        var chunkId = info;
+        if (kony.sync.isValidJSTable(info)) {
+            chunkId = info[kony.sync.chunkNoKey];
+        }
+        if (isChunkPayloadIdInvalid(result)) {
+            sync.log.trace(" Chunk PayloadId is Invalid : " + payloadId);
+            chunkingFailed++;
+            kony.sync.callOnChunkError(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], chunkId, chunkCount - chunkProcessed, chunkProcessed, kony.sync.errorCodeChunkInvalidPayloadId, result.d.msg, serverParams);
+            kony.sync.clearChunkMetaDataAndAllChunks(payloadId, kony.sync.currentScope[kony.sync.scopeName], clearChunkMetaDataAndAllChunksSuccessCallback, clearChunkMetaDataAndAllChunksErrorCallback);
+        } else {
+            if (callNo <= chunkCount) {
+                if (!isResumed) {
+                    if (callNo !== 0) {
                         infoObj[kony.sync.chunkNoKey] = callNo;
                         serviceParams[kony.sync.chunkNoKey] = callNo;
                         kony.sync.callOnChunkStart(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], callNo, serviceParams);
                         sync.log.info("Hitting the service with URL :" + url + " with params:", serviceParams);
                         retries = kony.sync.currentSyncConfigParams[kony.sync.numberOfRetriesKey];
                         kony.sync.invokeServiceAsync(url, serviceParams, downloadNetworkCallbackStatus, infoObj);
-                        if (callNo >= noOfParallelCalls + 1) {
-                            callNo++;
-                            break;
+                        callNo++;
+                    }
+                } else {
+                    for (; callNo <= chunkCount; callNo++) {
+                        if (chunkMap[callNo] === 0) {
+                            infoObj[kony.sync.chunkNoKey] = callNo;
+                            serviceParams[kony.sync.chunkNoKey] = callNo;
+                            kony.sync.callOnChunkStart(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], callNo, serviceParams);
+                            sync.log.info("Hitting the service with URL :" + url + " with params:", serviceParams);
+                            retries = kony.sync.currentSyncConfigParams[kony.sync.numberOfRetriesKey];
+                            kony.sync.invokeServiceAsync(url, serviceParams, downloadNetworkCallbackStatus, infoObj);
+                            if (callNo >= noOfParallelCalls + 1) {
+                                callNo++;
+                                break;
+                            }
                         }
                     }
                 }
             }
-        }
-        var chunkId = info;
-        if (kony.sync.isValidJSTable(info)) {
-            chunkId = info[kony.sync.chunkNoKey];
-        }
-        if (!kony.sync.isNull(result.opstatus) && result.opstatus !== 0) {
-            chunkingFailed++;
-            sync.log.error("Error occurred while downloading chunks: Code=" + result.opstatus + ", message=" + result.errmsg);
-            chunkErrorMap[chunkId] = result.errmsg;
-            kony.sync.callOnChunkError(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], chunkId, chunkCount - chunkProcessed, chunkProcessed, result.opstatus, result.errmsg, serverParams);
-            sync.log.trace("downloadNetworkCallback - calling allChunksProcessed - for result.opstatus !== 0");
-            if (allChunksProcessed()) {
-                handleError();
-            }
-        } else if (result.d.error === "true") {
-            chunkingFailed++;
-            sync.log.error("Error occurred while downloading chunks: message=" + result.d.msg);
-            chunkErrorMap[chunkId] = result.d.msg;
-            kony.sync.callOnChunkError(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], chunkId, chunkCount - chunkProcessed, chunkProcessed, kony.sync.errorCodeUnknownServerError, result.d.msg, serverParams);
-            sync.log.trace("downloadNetworkCallback - calling allChunksProcessed - for result.d.error == true");
-            if (allChunksProcessed()) {
-                handleError();
-            }
-        } else {
-            //store in local DB
-            //sync.log.trace("calling kony.sync.storeChunkInDB with payl");
-            kony.sync.storeChunkInDB(payloadId, chunkId, result.d[kony.sync.chunkDataKey], kony.sync.currentScope[kony.sync.scopeName], chunkDataStoredCallback);
-            sync.log.trace("downloadNetworkCallback - calling allChunksProcessed -storeChunkInDB");
-            if (allChunksProcessed()) {
-                handleError();
+            if (!kony.sync.isNull(result.opstatus) && result.opstatus !== 0) {
+                chunkingFailed++;
+                sync.log.error("Error occurred while downloading chunks: Code=" + result.opstatus + ", message=" + result.errmsg);
+                chunkErrorMap[chunkId] = result.errmsg;
+                kony.sync.callOnChunkError(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], chunkId, chunkCount - chunkProcessed, chunkProcessed, result.opstatus, result.errmsg, serverParams);
+                if (allChunksProcessed()) {
+                    handleError();
+                }
+            } else if (result.d.error === "true") {
+                chunkingFailed++;
+                sync.log.error("Error occurred while downloading chunks: message=" + result.d.msg);
+                chunkErrorMap[chunkId] = result.d.msg;
+                kony.sync.callOnChunkError(chunkCount, payloadId, kony.sync.currentScope[kony.sync.scopeName], chunkId, chunkCount - chunkProcessed, chunkProcessed, kony.sync.errorCodeUnknownServerError, result.d.msg, serverParams);
+                if (allChunksProcessed()) {
+                    handleError();
+                }
+            } else {
+                //store in local DB
+                kony.sync.storeChunkInDB(payloadId, chunkId, result.d[kony.sync.chunkDataKey], kony.sync.currentScope[kony.sync.scopeName], chunkDataStoredCallback);
+                if (allChunksProcessed()) {
+                    handleError();
+                }
             }
         }
     }
@@ -3454,9 +3603,68 @@ kony.sync.callOnChunkError = function(chunkCount, payloadId, scope, chunkid, pen
     params.errorInfo = errorInfo;
     kony.sync.verifyAndCallClosure(kony.sync.currentSyncConfigParams[kony.sync.onChunkError], params);
 };
-//  **************** End KonySyncChunkingHelper.js*******************
-//  **************** Start KonySyncDataReconciliation.js*******************
-//  **************** Start KonySyncDataReconciliation.js*******************
+kony.sync.clearChunkMetaDataAndAllChunks = function(payloadId, scopeName, successCallback, errorCallback) {
+        sync.log.trace("Entering kony.sync.clearAllChunksAndChunkMetaData");
+        var isError = false;
+        var dbName = kony.sync.currentScope[kony.sync.scopeDataSource];
+        var dbConnection = kony.sync.getConnectionOnly(dbName, dbName, transactionErrorCallback);
+        if (dbConnection !== null) {
+            kony.db.transaction(dbConnection, transactionCallback, transactionErrorCallback, transactionSuccessCallback);
+        }
+
+        function transactionCallback(tx) {
+            //clearing metadata from konysyncCHUNKMETAINFO table for particular payloadId
+            sync.log.trace("Entering kony.sync.clearAllChunksAndChunkMetaData->transactionCallback");
+            var wcs = [];
+            wcs.push({
+                key: kony.sync.metaTableScopeColumn,
+                value: scopeName
+            });
+            wcs.push({
+                key: kony.sync.chunkTablePayloadId,
+                value: payloadId
+            });
+            query = kony.sync.qb_createQuery();
+            kony.sync.qb_where(query, wcs);
+            kony.sync.qb_delete(query, kony.sync.chunkMetaTableName);
+            query_compile = kony.sync.qb_compile(query);
+            sql = query_compile[0];
+            params = query_compile[1];
+            if (kony.sync.executeSql(tx, sql, params) === false) {
+                isError = true;
+                return;
+            }
+            //clearing all chunks from konysyncCHUNKDATA table for particular payloadId
+            query = kony.sync.qb_createQuery();
+            kony.sync.qb_where(query, wcs);
+            kony.sync.qb_delete(query, kony.sync.chunkTableName);
+            query_compile = kony.sync.qb_compile(query);
+            sql = query_compile[0];
+            params = query_compile[1];
+            if (kony.sync.executeSql(tx, sql, params) === false) {
+                isError = true;
+                return;
+            }
+        }
+
+        function transactionErrorCallback() {
+            sync.log.trace("Entering kony.sync.clearAllChunksAndChunkMetaData->transactionErrorCallback");
+            if (isError) {
+                sync.log.trace("Error occurred while deleting chunk data for invalid payloadid from konysyncCHUNKMETAINFO/konysyncCHUNKDATA");
+            } else {
+                sync.log.trace("Transaction occurred when deleting chunk data from konysyncCHUNKMETAINFO/konysyncCHUNKDATA");
+            }
+            errorCallback(isError);
+        }
+
+        function transactionSuccessCallback() {
+            sync.log.trace("Entering kony.sync.clearAllChunksAndChunkMetaData->transactionSuccessCallback");
+            successCallback();
+        }
+    }
+    //  **************** End KonySyncChunkingHelper.js*******************
+    //  **************** Start KonySyncDataReconciliation.js*******************
+    //  **************** Start KonySyncDataReconciliation.js*******************
 kony.sync.tempTableKey = "_tempReconciliation";
 kony.sync.reconcileCacheKey = "_cacheReconciliation";
 kony.sync.currentReconcileScopeIndex = null;
@@ -5483,8 +5691,8 @@ kony.sync.removeEx = function(tx, tablename, wc, isBatch, errorcallback) {
 };
 kony.sync.addToRollBack = function(tx, tablename, values, changetype, wcs, errorCallback) {
     sync.log.trace("Entering kony.sync.addToRollBack ");
-    var originalwcs = kony.sync.CreateCopy(wcs);
-    var originalvalues = kony.sync.CreateCopy(values);
+    var originalwcs = kony.sync.createClone(wcs);
+    var originalvalues = kony.sync.createClone(values);
     var rowExists = null;
     if (changetype === kony.sync.insertColStatus || changetype === kony.sync.insertColStatusDI) {
         originalvalues[kony.sync.originalTableChangeTypeColumn] = changetype;
@@ -7533,6 +7741,7 @@ kony.sync.errorCodeReconcileSessionInProgress = 7034; //"Reconcile Session in pr
 kony.sync.errorCodeBackendTokenExpiredForOfflineAuth = 7035;
 kony.sync.errorUnknown = 7777;
 kony.sync.errorCodeUnknownServerError = 8888;
+kony.sync.errorCodeChunkInvalidPayloadId = 9999;
 kony.sync.errorCodeBlobFileNotCreated = 9000;
 kony.sync.errorCodeInvalidColumnType = 9001;
 kony.sync.errorCodeEmptyOrNullBase64 = 9002;
@@ -7555,10 +7764,12 @@ kony.sync.errorCodeRecordDoNotExist = 9018;
 kony.sync.errorCodeBinaryUploadFailed = 9019;
 kony.sync.errorCodeBinaryDataFFINotConfigured = 9020;
 kony.sync.errorCodeNullDownloadID = 9021;
+kony.sync.errorCodeInvalidChunkSize = 9022;
 kony.sync.retryErrors = {};
 //Server ErrorCodes
 kony.sync.servercodes = {};
 kony.sync.servercodes.appVersionNotLatest = "SY3001E";
+kony.sync.servercodes.chunkPayloadIdInvalid = "SY3008E";
 kony.sync.getSessionInProgressError = function() {
     sync.log.trace("Entering kony.sync.getSessionInProgressError ");
     return kony.sync.getErrorTable(kony.sync.errorCodeSessionInProgress, kony.sync.getErrorMessage(kony.sync.errorCodeSessionInProgress), null);
@@ -7700,6 +7911,7 @@ kony.sync.getErrorMessage = function(errorCode, objectName, attributeName) {
     errorMap[kony.sync.errorCodeBackendTokenExpiredForOfflineAuth] = "Backend token has expired. Please login with network before invoking online services";
     errorMap[kony.sync.errorCodeBinaryDataFFINotConfigured] = "binary data ffi is not configured to use the Binary APIs.";
     errorMap[kony.sync.errorCodeNullDownloadID] = "Download ID for a download operation cannot be null";
+    errorMap[kony.sync.errorCodeInvalidChunkSize] = "ChunkSize value given is invalid " + objectName;
     if (errorMap[errorCode] === null) {
         return "Some unknown client error";
     } else {
@@ -10667,6 +10879,14 @@ sync.startDownload = function(downloadID, successCallback, errorCallback) {
     sync.log.trace("Entering sync.startDownload for downloadID " + downloadID);
     kony.sync.startDownload(downloadID, successCallback, errorCallback);
 };
+sync.pauseDownload = function(downloadID, successCallback, errorCallback) {
+    sync.log.trace("Entering sync.pauseDownload for downloadID " + downloadID);
+    kony.sync.pauseDownload(downloadID, successCallback, errorCallback);
+};
+sync.resumeDownload = function(downloadID, successCallback, errorCallback) {
+    sync.log.trace("Entering sync.resumeDownload for downloadID " + downloadID);
+    kony.sync.resumeDownload(downloadID, successCallback, errorCallback);
+};
 sync.getBinaryDataFilePath = function(tableName, binaryColumnName, primaryKeyTable, successCallback, errorCallback) {
     sync.log.trace("Entering sync.getBinaryDataFilePath for tableName ", tableName, " binary column ", binaryColumnName, " with primary keys ", primaryKeyTable);
     var dbname = kony.sync.getDBName();
@@ -10689,7 +10909,7 @@ if (typeof(sync) === "undefined") {
     sync = {};
 }
 sync.log = {};
-//TRACE(6) > DEBUG(5) > INFO(4) > WARN(3) > ERROR(2) > FATAL(1) > NONE(0)
+//NONE(0) < TRACE(1) < DEBUG(2) < INFO(4) < WARN(8) < ERROR(16) < FATAL(32)
 kony.sync.log.NONE = {
     value: 0,
     name: "none",
@@ -10763,116 +10983,99 @@ kony.sync.log.ALL = {
 //Global to maintain current loglevel
 kony.sync.currentLogLevel = kony.sync.log.ALL;
 sync.log.trace = function(msg, params) {
-    //kony.sync.logger(kony.sync.log.TRACE, msg, params);
-    params = (typeof(params) === "undefined") ? "" : params;
-    //Stringify object
-    if (kony.sync.isValidJSTable(params)) {
-        params = JSON.stringify(params, null, " ");
-    }
-    KonySyncLogger.logTrace(msg + " " + params);
+    kony.sync.logger(kony.sync.log.TRACE, msg, params);
 };
 sync.log.debug = function(msg, params) {
-    //kony.sync.logger(kony.sync.log.DEBUG, msg, params);
-    params = (typeof(params) === "undefined") ? "" : params;
-    //Stringify object
-    if (kony.sync.isValidJSTable(params)) {
-        params = JSON.stringify(params, null, " ");
-    }
-    KonySyncLogger.logDebug(msg + " " + params);
+    kony.sync.logger(kony.sync.log.DEBUG, msg, params);
 };
 sync.log.info = function(msg, params) {
-    params = (typeof(params) === "undefined") ? "" : params;
-    //Stringify object
-    if (kony.sync.isValidJSTable(params)) {
-        params = JSON.stringify(params, null, " ");
-    }
-    KonySyncLogger.logInfo(msg + " " + params);
+    kony.sync.logger(kony.sync.log.INFO, msg, params);
 };
 sync.log.warn = function(msg, params) {
-    //kony.sync.logger(kony.sync.log.WARN, msg, params);
-    params = (typeof(params) === "undefined") ? "" : params;
-    //Stringify object
-    if (kony.sync.isValidJSTable(params)) {
-        params = JSON.stringify(params, null, " ");
-    }
-    KonySyncLogger.logWarning(msg + " " + params);
+    kony.sync.logger(kony.sync.log.WARN, msg, params);
 };
 sync.log.error = function(msg, params) {
-    //kony.sync.logger(kony.sync.log.ERROR, msg, params);
-    params = (typeof(params) === "undefined") ? "" : params;
-    //Stringify object
-    if (kony.sync.isValidJSTable(params)) {
-        params = JSON.stringify(params, null, " ");
-    }
-    KonySyncLogger.logError(msg + " " + params);
+    kony.sync.logger(kony.sync.log.ERROR, msg, params);
 };
 sync.log.fatal = function(msg, params) {
-    //kony.sync.logger(kony.sync.log.FATAL, msg, params);
+    kony.sync.logger(kony.sync.log.FATAL, msg, params);
+};
+kony.sync.logger = function(logLevel, msg, params) {
     params = (typeof(params) === "undefined") ? "" : params;
     //Stringify object
     if (kony.sync.isValidJSTable(params)) {
         params = JSON.stringify(params, null, " ");
     }
-    KonySyncLogger.logFatal(msg + " " + params);
+    sync.log.invokeKonySyncLogger(logLevel, msg + " " + params);
 };
-kony.sync.logger = function(logLevel, msg, params) {
-    if (logLevel.value <= kony.sync.currentLogLevel.value) {
-        params = (typeof(params) === "undefined") ? "" : params;
-        //Stringify object
-        if (kony.sync.isValidJSTable(params)) {
-            params = JSON.stringify(params, null, " ");
-        }
-        var date = new Date().toLocaleDateString();
-        var time = new Date().toLocaleTimeString();
-        var level = logLevel.code;
-        var formattedMessage = "[KonySync][" + level + "][" + date + "][" + time + "] : " + msg + " " + params;
-        kony.print(formattedMessage);
+sync.log.invokeKonySyncLogger = function(logLevel, message) {
+    switch (logLevel) {
+        case kony.sync.log.TRACE:
+            KonySyncLogger.logTrace(message);
+            break;
+        case kony.sync.log.DEBUG:
+            KonySyncLogger.logDebug(message);
+            break;
+        case kony.sync.log.INFO:
+            KonySyncLogger.logInfo(message);
+            break;
+        case kony.sync.log.WARN:
+            KonySyncLogger.logWarning(message);
+            break;
+        case kony.sync.log.ERROR:
+            KonySyncLogger.logError(message);
+            break;
+        case kony.sync.log.FATAL:
+            KonySyncLogger.logFatal(message);
+            break;
+        default:
+            sync.log.error("Implementation not found for the specified log level " + logLevel);
+            return;
     }
 };
 sync.log.isDebugEnabled = function() {
-    return kony.sync.currentLogLevel.value >= kony.sync.log.DEBUG.value;
+    return kony.sync.currentLogLevel.value >= kony.sync.log.DEBUG_AND_ABOVE.value;
 };
 sync.log.isTraceEnabled = function() {
-    return kony.sync.currentLogLevel.value >= kony.sync.log.TRACE.value;
+    return kony.sync.currentLogLevel.value >= kony.sync.log.TRACE_AND_ABOVE.value;
 };
 sync.log.isInfoEnabled = function() {
-    return kony.sync.currentLogLevel.value >= kony.sync.log.INFO.value;
+    return kony.sync.currentLogLevel.value >= kony.sync.log.INFO_AND_ABOVE.value;
 };
 sync.log.isWarnEnabled = function() {
-    return kony.sync.currentLogLevel.value >= kony.sync.log.WARN.value;
+    return kony.sync.currentLogLevel.value >= kony.sync.log.WARN_AND_ABOVE.value;
 };
 sync.log.isFatalEnabled = function() {
-    return kony.sync.currentLogLevel.value >= kony.sync.log.FATAL.value;
+    return kony.sync.currentLogLevel.value >= kony.sync.log.FATAL_AND_ABOVE.value;
 };
 sync.log.isErrorEnabled = function() {
-    return kony.sync.currentLogLevel.value >= kony.sync.log.ERROR.value;
+    return kony.sync.currentLogLevel.value >= kony.sync.log.ERROR_AND_ABOVE.value;
 };
 sync.log.isNoneEnabled = function() {
     return kony.sync.currentLogLevel.value === kony.sync.log.NONE.value;
 };
 sync.log.setLogLevel = function(level, logSuccessCallback, logFailureCallback) {
-    sync.log.setLogLevelForLoggerEngine(level.value);
     switch (level) {
         case kony.sync.log.NONE:
             kony.sync.currentLogLevel = kony.sync.log.NONE;
             break;
         case kony.sync.log.TRACE:
-            kony.sync.currentLogLevel = kony.sync.log.TRACE;
-            break;
-        case kony.sync.log.INFO:
-            kony.sync.currentLogLevel = kony.sync.log.INFO;
-            break;
-        case kony.sync.log.WARN:
-            kony.sync.currentLogLevel = kony.sync.log.WARN;
-            break;
-        case kony.sync.log.ERROR:
-            kony.sync.currentLogLevel = kony.sync.log.ERROR;
-            break;
-        case kony.sync.log.FATAL:
-            kony.sync.currentLogLevel = kony.sync.log.FATAL;
+            kony.sync.currentLogLevel = kony.sync.log.TRACE_AND_ABOVE;
             break;
         case kony.sync.log.DEBUG:
-            kony.sync.currentLogLevel = kony.sync.log.DEBUG;
+            kony.sync.currentLogLevel = kony.sync.log.DEBUG_AND_ABOVE;
+            break;
+        case kony.sync.log.INFO:
+            kony.sync.currentLogLevel = kony.sync.log.INFO_AND_ABOVE;
+            break;
+        case kony.sync.log.WARN:
+            kony.sync.currentLogLevel = kony.sync.log.WARN_AND_ABOVE;
+            break;
+        case kony.sync.log.ERROR:
+            kony.sync.currentLogLevel = kony.sync.log.ERROR_AND_ABOVE;
+            break;
+        case kony.sync.log.FATAL:
+            kony.sync.currentLogLevel = kony.sync.log.FATAL_AND_ABOVE;
             break;
         case kony.sync.log.ALL:
             kony.sync.currentLogLevel = kony.sync.log.ALL;
@@ -10882,6 +11085,7 @@ sync.log.setLogLevel = function(level, logSuccessCallback, logFailureCallback) {
             kony.sync.verifyAndCallClosure(logFailureCallback, "Failed in setting log level " + level);
             return;
     }
+    sync.log.setLogLevelForLoggerEngine(currentLogLevel.value);
     sync.log.info("Log Level successfully set to " + kony.sync.currentLogLevel.name);
     kony.sync.verifyAndCallClosure(logSuccessCallback, "Log Level successfully set to " + kony.sync.currentLogLevel.name);
 };
@@ -10890,12 +11094,12 @@ sync.log.getCurrentLogLevel = function() {
 };
 sync.log.loggerEngineInit = function() {
     // ****************************** Start Logger Engine Initialization **********************
-    function addPersisterErrorCallback(statement) {
-        kony.print("Could not add persister, due to the following errors:\n", statement);
+    function addPersisterErrorCallback(errorsString) {
+        kony.print("Could not add persister, due to the following errors:\n", errorsString);
     }
 
-    function setConfigErrorCallback(statement) {
-        kony.print("Could not set logger config, due to the following errors:\n", statement);
+    function setConfigErrorCallback(errorsString) {
+        kony.print("Could not set logger config, due to the following errors:\n", errorsString);
     }
     loggerConfig = {
         "accumulatorConfig": {
@@ -10908,7 +11112,7 @@ sync.log.loggerEngineInit = function() {
         "properties": {
             "dumpLocation": "KonySync_Logs",
             "maxNumberOfLogFiles": 10,
-            "maxFileSize": 10240,
+            "maxFileSize": 2048000,
             "logFileNamePrefix": "Sync",
             "formatterConfig": {
                 "logName": "Sync",
@@ -10930,7 +11134,7 @@ sync.log.loggerEngineInit = function() {
 
     function setLoggerConfig() {
         KonySyncLogger.setConfig(loggerConfig, setConfigErrorCallback);
-        sync.log.setLogLevelForLoggerEngine(kony.sync.log.ALL.value);
+        sync.log.setLogLevelForLoggerEngine(kony.sync.currentLogLevel.value);
     }
 
     function addPersisterConfig() {
@@ -15098,12 +15302,13 @@ kony.sync.syncUploadChanges = function(sname, dsname, onCompletion) {
     kony.sync.getLastSyncUploadContext(sname, dsname, kony.sync.syncUploadChangesForBatch);
 };
 kony.sync.createClone = function(obj) {
+    sync.log.trace("Entering kony.sync.createClone ");
     var copy;
     if (null == obj || "object" != typeof obj) return obj;
     if (obj instanceof Array) {
         copy = [];
-        for (var i = 0, len = obj.length; i < len; i++) {
-            copy[i] = kony.sync.createClone(obj[i]);
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) copy[attr] = kony.sync.createClone(obj[attr]);
         }
         return copy;
     }
@@ -16806,7 +17011,6 @@ kony.sync.validateInput = function(input, objectName, ormType, errorcallback) {
     return true;
 };
 kony.sync.validatePrimaryKeyField = function(objName, opType, inputAttribute, errorcallback) {
-    var isError = false;
     sync.log.trace("Entering kony.sync.validatePrimaryKeyField");
     if (kony.sync.isNullOrUndefined(inputAttribute)) {
         kony.sync.verifyAndCallClosure(errorcallback, "Argument type mismatch found for operation:" + objName + ".  Expected 'integer, string or object ' Actual null or undefined '");
@@ -16819,17 +17023,7 @@ kony.sync.validatePrimaryKeyField = function(objName, opType, inputAttribute, er
         kony.sync.alert("Argument type mismatch found for operation:" + objName + ".  Expected 'integer, string or object' Actual '" + actualType + "'");
         return false;
     }
-    for (var p in inputAttribute) {
-        if (typeof(inputAttribute[p]) === "object") {
-            isError = kony.sync.pkValidationForObjects(objName, inputAttribute, errorcallback);
-            break;
-        }
-        break;
-    }
-    if (!isError) return true;
-    else {
-        return false;
-    }
+    return true;
 };
 kony.sync.validateInputField = function(objName, opType, inputAttribute, expectedType, errorcallback) {
     sync.log.trace("Entering kony.sync.validateInputField");
@@ -16861,23 +17055,4 @@ kony.sync.alert = function(msg) {
         kony.print(msg);
     }
 };
-kony.sync.pkValidationForObjects = function(objName, inputAttribute, errorcallback) {
-        sync.log.trace("Entering kony.sync.pkValidationForObjects");
-        var isError = false;
-        for (var p in inputAttribute) {
-            if (kony.sync.isNullOrUndefined(inputAttribute[p].value)) {
-                isError = true;
-                var x = new Object();
-                x.errorCode = 7003;
-                var formatobjcall = objName;
-                var y = formatobjcall.lastIndexOf(".");
-                formatobjcall = formatobjcall.slice(0, y);
-                y = formatobjcall.lastIndexOf(".");
-                formatobjcall = formatobjcall.slice(y + 1, formatobjcall.length);
-                x.errorMessage = "Primary Key " + p + " not specified in searching an item in " + formatobjcall;
-                errorcallback(x);
-            }
-        }
-        return isError;
-    }
-    //  **************** End KonySyncValidations.js*******************
+//  **************** End KonySyncValidations.js*******************

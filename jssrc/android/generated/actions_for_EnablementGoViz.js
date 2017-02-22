@@ -1,7 +1,6 @@
 //actions.js file 
 function AS_AppEvents_457245f58d09465a86a236a5bed832b6(eventobject) {
     initializeApp.call(this);
-    showeventsf.call(this);
 }
 
 function AS_AppEvents_ee86c84e5b134efd8546ebad61c19c23(eventobject) {
@@ -228,7 +227,7 @@ function AS_Segment_4f3e4454990648ec8c06b7901ba6e13a(eventobject) {
 
 function AS_Segment_d5fd7f01444645e7b56043acaa21d9f5(eventobject, sectionNumber, rowNumber) {
     frmEventDetail.show();
-    eventDetail();
+    eventDetail.call(this);
 }
 
 function AS_Tab_8fea5489f535407c84f31bbfafc7e05f(eventobject) {

@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "2%"
+        "value": "1%"
     },
     "_margin_": [
         1,
@@ -24,10 +24,6 @@
     ],
     "_skin_": "sc9c5c16c0514edd8ecc6076bf870f95",
     "_text_": "10 AM - 2 PM",
-    "_top_": {
-        "type": "string",
-        "value": "20%"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"

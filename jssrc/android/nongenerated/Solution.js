@@ -30,7 +30,8 @@ function showeventsf() {
             //frmEventDetail.ScheduleSeg.removeAll();
             for (var i = 0; i < res.result.length; i++) {
                 var imageBanner = ""; //
-                var eventCategory = setBanner(res.result[i].event_type);
+                var eventCategory = res.result[i].event_type; //setBanner(res.result[i].event_type);
+                kony.print("dlskdl    " + JSON.stringify(res));
                 if (eventCategory === "Hackathon") imageBanner = "banner4.png";
                 if (eventCategory === "Workshop") imageBanner = "banner3.png";
                 if (eventCategory === "Training") imageBanner = "banner5.png";
@@ -57,6 +58,7 @@ function showeventsf() {
                     "event_id": res.result[i].event_id,
                     "lblEventName": res.result[i].name,
                     "lblScore": res.result[i].max_score,
+                    "Description": res.result[i].description,
                     "Star1": rating[1],
                     "Star2": rating[2],
                     "Star3": rating[3],
@@ -79,6 +81,7 @@ function showeventsf() {
                     "event_id": res.result[i].event_id,
                     "lblEventName": res.result[i].name,
                     "lblScore": res.result[i].max_score,
+                    "Description": res.result[i].description,
                     "Star1": rating[1],
                     "Star2": rating[2],
                     "Star3": rating[3],
@@ -183,16 +186,18 @@ function regUser() {
 
 function eventDetail() {
     if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
-        frmEventDetail.lblMyEventName.text = frmHome.segEvents.selectedItems[0].name;
-        frmEventDetail.lblLocation.text = frmHome.segEvents.selectedItems[0].location;
-        frmEventDetail.lblPoints.text = frmHome.segEvents.selectedItems[0].max_score;
-        frmEventDetail.txtDescription.text = frmHome.segEvents.selectedItems[0].description;
+        frmEventDetail.lblMyEventName.text = frmHome.segEvents.selectedItems[0].lblEventName;
+        frmEventDetail.lblLocation.text = frmHome.segEvents.selectedItems[0].lblLocation;
+        frmEventDetail.lblPoints.text = frmHome.segEvents.selectedItems[0].lblScore;
+        frmEventDetail.txtDescription.text = frmHome.segEvents.selectedItems[0].Description;
         var row = frmHome.segEvents.selectedRowIndex[1];
         var i = " " + parseInt(row);
         var x = i.trim();
         //alert(row);
+        var data = [];
         frmEventDetail.ScheduleSeg.widgetDataMap = {
-            "lblStageName": "session_name"
+            "lblStageName": "session_name",
+            "descrpition": "sesion_description"
         };
         frmEventDetail.ScheduleSeg.setData(session[x].sessions);
         //frmEventDetail.btnEnroll.

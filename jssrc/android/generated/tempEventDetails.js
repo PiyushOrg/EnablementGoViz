@@ -1,8 +1,7 @@
 function initializetempEventDetails() {
     CopyflxMyEvent0db10d8d616a84e = new kony.ui.FlexContainer({
-        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
         "clipBounds": true,
-        "height": "45dp",
         "id": "CopyflxMyEvent0db10d8d616a84e",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
@@ -10,35 +9,31 @@ function initializetempEventDetails() {
     }, {}, {});
     CopyflxMyEvent0db10d8d616a84e.setDefaultUnit(kony.flex.DP);
     var ScheduleCont = new kony.ui.FlexContainer({
-        "autogrowMode": kony.flex.AUTOGROW_NONE,
-        "centerX": "50%",
-        "centerY": "50%",
+        "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
         "clipBounds": true,
-        "height": "100%",
         "id": "ScheduleCont",
         "isVisible": true,
-        "layoutType": kony.flex.FREE_FORM,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
         "left": "0dp",
         "skin": "slFbox",
-        "top": "0%",
-        "width": "90%",
+        "top": "0dp",
+        "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 2
     }, {}, {});
     ScheduleCont.setDefaultUnit(kony.flex.DP);
     var lblSeparater = new kony.ui.Label({
-        "centerY": "50%",
-        "height": "100%",
+        "centerY": "50dp",
         "id": "lblSeparater",
-        "isVisible": true,
-        "left": "5%",
+        "isVisible": false,
+        "left": 5,
         "skin": "CopyslLabel0530664e3f97947",
         "text": "| | | | | | | | | | | | | | | | |",
         "textStyle": {
             "letterSpacing": 0,
             "strikeThrough": false
         },
-        "top": "0%",
-        "width": "0.30%",
+        "top": 0,
+        "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
         "contentAlignment": constants.CONTENT_ALIGN_TOP_LEFT,
@@ -47,39 +42,46 @@ function initializetempEventDetails() {
     }, {
         "textCopyable": false
     });
-    var lblSep2 = new kony.ui.Label({
-        "height": "10%",
-        "id": "lblSep2",
-        "isVisible": false,
-        "left": "10.00%",
-        "skin": "CopyslLabel052248d411e4044",
-        "text": "------------------",
-        "textStyle": {
-            "letterSpacing": 0,
-            "strikeThrough": false
-        },
-        "top": "45%",
-        "width": "10.04%",
-        "zIndex": 1
-    }, {
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "padding": [0, 0, 0, 0],
-        "paddingInPixel": false
-    }, {
-        "textCopyable": false
-    });
-    var flxMyEventDetail = new kony.ui.FlexContainer({
+    var CkeckBox = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
-        "centerY": "50%",
         "clipBounds": true,
-        "height": "100%",
-        "id": "flxMyEventDetail",
+        "height": "13dp",
+        "id": "CkeckBox",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
-        "left": "14%",
+        "left": "5%",
+        "skin": "CopyslFbox07a49a24c0d3044",
+        "top": "0dp",
+        "width": "13dp",
+        "zIndex": 3
+    }, {}, {});
+    CkeckBox.setDefaultUnit(kony.flex.DP);
+    CkeckBox.add();
+    var CheckImg = new kony.ui.Image2({
+        "height": "13dp",
+        "id": "CheckImg",
+        "isVisible": false,
+        "left": "0dp",
+        "skin": "slImage",
+        "src": "tickicn.png",
+        "top": "16dp",
+        "width": "13dp",
+        "zIndex": 1
+    }, {
+        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var flxMyEventDetail = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
+        "clipBounds": true,
+        "id": "flxMyEventDetail",
+        "isVisible": true,
+        "layoutType": kony.flex.FLOW_VERTICAL,
+        "left": "7%",
         "skin": "CopyslFbox0d40d80636da145",
-        "top": "10%",
-        "width": "70%",
+        "top": "0dp",
+        "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 2
     }, {}, {});
     flxMyEventDetail.setDefaultUnit(kony.flex.DP);
@@ -93,8 +95,8 @@ function initializetempEventDetails() {
             "letterSpacing": 0,
             "strikeThrough": false
         },
-        "top": "35%",
-        "width": "90%",
+        "top": "0dp",
+        "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
@@ -103,17 +105,16 @@ function initializetempEventDetails() {
     }, {
         "textCopyable": false
     });
-    var Label08b194af0dc3d41 = new kony.ui.Label({
-        "id": "Label08b194af0dc3d41",
-        "isVisible": false,
-        "left": "75%",
-        "skin": "CopyslLabel082bfd907af1a44",
-        "text": "Ongoing",
+    var descrpition = new kony.ui.Label({
+        "id": "descrpition",
+        "isVisible": true,
+        "left": "1%",
+        "skin": "CopyslLabel017459d0842b644",
+        "text": "Demo of installation steps",
         "textStyle": {
             "letterSpacing": 0,
             "strikeThrough": false
         },
-        "top": "80%",
         "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
@@ -124,30 +125,26 @@ function initializetempEventDetails() {
         "textCopyable": false
     });
     var DateNTimeCont = new kony.ui.FlexContainer({
-        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
         "clipBounds": true,
-        "height": "40%",
         "id": "DateNTimeCont",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
         "left": "1%",
         "skin": "slFbox",
-        "top": "60%",
-        "width": "100%",
+        "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {}, {});
     DateNTimeCont.setDefaultUnit(kony.flex.DP);
     var lblDateName = new kony.ui.Label({
         "id": "lblDateName",
         "isVisible": true,
-        "left": "0%",
         "skin": "CopyslLabel00da8d2989eaf43",
         "text": "Date : ",
         "textStyle": {
             "letterSpacing": 0,
             "strikeThrough": false
         },
-        "top": "20%",
         "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
@@ -167,7 +164,6 @@ function initializetempEventDetails() {
             "letterSpacing": 0,
             "strikeThrough": false
         },
-        "top": "20%",
         "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
@@ -178,8 +174,7 @@ function initializetempEventDetails() {
         "textCopyable": false
     });
     var Linelbl = new kony.ui.Label({
-        "centerY": "50%",
-        "height": "65%",
+        "height": "10dp",
         "id": "Linelbl",
         "isVisible": true,
         "left": "1%",
@@ -188,6 +183,7 @@ function initializetempEventDetails() {
             "letterSpacing": 0,
             "strikeThrough": false
         },
+        "top": "2dp",
         "width": "1dp",
         "zIndex": 1
     }, {
@@ -200,14 +196,13 @@ function initializetempEventDetails() {
     var lblTime = new kony.ui.Label({
         "id": "lblTime",
         "isVisible": true,
-        "left": "2%",
+        "left": "1%",
         "skin": "CopyslLabel00da8d2989eaf43",
         "text": "10 AM - 2 PM",
         "textStyle": {
             "letterSpacing": 0,
             "strikeThrough": false
         },
-        "top": "20%",
         "width": kony.flex.USE_PREFFERED_SIZE,
         "zIndex": 1
     }, {
@@ -218,39 +213,7 @@ function initializetempEventDetails() {
         "textCopyable": false
     });
     DateNTimeCont.add(lblDateName, lblDate, Linelbl, lblTime);
-    flxMyEventDetail.add(lblStageName, Label08b194af0dc3d41, DateNTimeCont);
-    var CkeckBox = new kony.ui.FlexContainer({
-        "autogrowMode": kony.flex.AUTOGROW_NONE,
-        "clipBounds": true,
-        "height": "13dp",
-        "id": "CkeckBox",
-        "isVisible": true,
-        "layoutType": kony.flex.FREE_FORM,
-        "left": "3.14%",
-        "skin": "CopyslFbox07a49a24c0d3044",
-        "top": "16dp",
-        "width": "13dp",
-        "zIndex": 3
-    }, {}, {});
-    CkeckBox.setDefaultUnit(kony.flex.DP);
-    CkeckBox.add();
-    var CheckImg = new kony.ui.Image2({
-        "centerX": "10.39%",
-        "centerY": "50.76%",
-        "height": "13dp",
-        "id": "CheckImg",
-        "isVisible": false,
-        "left": "8.47%",
-        "skin": "slImage",
-        "src": "tickicn.png",
-        "top": "16dp",
-        "width": "13dp",
-        "zIndex": 1
-    }, {
-        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
-        "padding": [0, 0, 0, 0],
-        "paddingInPixel": false
-    }, {});
-    ScheduleCont.add(lblSeparater, lblSep2, flxMyEventDetail, CkeckBox, CheckImg);
+    flxMyEventDetail.add(lblStageName, descrpition, DateNTimeCont);
+    ScheduleCont.add(lblSeparater, CkeckBox, CheckImg, flxMyEventDetail);
     CopyflxMyEvent0db10d8d616a84e.add(ScheduleCont);
 }

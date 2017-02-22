@@ -24,10 +24,6 @@
     ],
     "_skin_": "sc9c5c16c0514edd8ecc6076bf870f95",
     "_text_": "22 Jan 2017",
-    "_top_": {
-        "type": "string",
-        "value": "20%"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
