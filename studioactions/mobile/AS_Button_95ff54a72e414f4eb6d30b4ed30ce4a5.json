@@ -1,0 +1,27 @@
+{
+    "AS_Button_95ff54a72e414f4eb6d30b4ed30ce4a5": {
+        "id": "AS_Button_95ff54a72e414f4eb6d30b4ed30ce4a5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmMyEventDetailed",
+            "type": "forms",
+            "platform": "",
+            "KUID": "1c4373d8799040819287da65ea1ee7d0"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___06fbfbf77afa4909b4f90e10b76146aa",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "rateSubmit",
+            "display": "rateSubmit",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null
+        }]
+    }
+}

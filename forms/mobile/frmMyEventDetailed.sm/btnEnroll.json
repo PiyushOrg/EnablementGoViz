@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "5.80%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0.00%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sdf373548b2c487faa0fd8f53b1d09f8",
+    "_text_": "Done",
+    "_top_": {
+        "type": "string",
+        "value": "91.60%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "89%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sdf373548b2c487faa0fd8f53b1d09f8",
+    "id": "btnEnroll",
+    "ide_onClick": "AS_Button_28a5ebd93d7b4215972922f77f81ab50",
+    "info": null,
+    "isvisible": true,
+    "kuid": "af9f3c070b704c30b838f879a197484a",
+    "name": "kony.ui.Button",
+    "parent": "flxMain",
+    "pf": "frmMyEventDetailed",
+    "wType": "Button",
+    "zindex": 1
+}

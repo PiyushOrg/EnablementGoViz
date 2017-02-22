@@ -43,8 +43,10 @@
         "topLevelBox": null
     },
     "id": "LikeImg",
+    "ide_onTouchEnd": "AS_Image_f56399a3f3754147930cf41467dc643d",
     "imagescalemode": 1,
     "info": null,
+    "invokedProperty": "src",
     "isvisible": true,
     "kuid": "4fdf95d31de94376bd0f4d5100e074da",
     "name": "kony.ui.Image2",

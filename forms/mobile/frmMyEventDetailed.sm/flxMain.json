@@ -39,7 +39,9 @@
     "canUpdateUI": true,
     "children": [
         "flxEventPic",
-        "flxEventDescription"
+        "flxEventDescription",
+        "btnEnroll",
+        "RateStars"
     ],
     "clipbounds": true,
     "containerweight": 100,

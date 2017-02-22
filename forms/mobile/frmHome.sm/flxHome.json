@@ -39,7 +39,8 @@
         "flxHeader",
         "flxSearch",
         "tabHome",
-        "ScanCont"
+        "ScanCont",
+        "TabHeadCont"
     ],
     "clipbounds": true,
     "containerweight": 100,

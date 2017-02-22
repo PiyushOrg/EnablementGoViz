@@ -1,0 +1,50 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "1.93%"
+    },
+    "_skin_": "sfa32eaeebf043d2a1c7a19dd2e89419",
+    "_text_": "Rate",
+    "_width_": {
+        "type": "string",
+        "value": "15%"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "52.71%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sb3ee9c871a445fc9e5d1bb6f67fb2b5",
+    "id": "rateitbtn",
+    "ide_onClick": "AS_Button_38dcd9b1943f4ce2af8b806e73411811",
+    "info": null,
+    "isvisible": true,
+    "kuid": "591e7db008b14dc3a5cff22107894fb9",
+    "name": "kony.ui.Button",
+    "parent": "RateItCont",
+    "pf": "frmMyEventDetailed",
+    "wType": "Button",
+    "zindex": 1
+}

@@ -50,7 +50,7 @@
             },
             "imgEvent": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "bck.PNG"
+                "src": "banner1.png"
             },
             "imgLike": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
@@ -164,7 +164,7 @@
             },
             "imgEvent": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "bck.PNG"
+                "src": "banner2.png"
             },
             "imgLike": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
@@ -278,7 +278,7 @@
             },
             "imgEvent": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "bck.PNG"
+                "src": "banner3.png"
             },
             "imgLike": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
@@ -418,6 +418,7 @@
     "rowtemplate": "flxEv",
     "screenlevelwidget": false,
     "seccounter": 0,
+    "sectionHeaderTemplateId": null,
     "sectionheaderskin": "sbf9de645a884e69803ed2739ee8a61b",
     "selectedRows": null,
     "selectedState": false,

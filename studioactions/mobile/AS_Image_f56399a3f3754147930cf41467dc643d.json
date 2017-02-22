@@ -1,0 +1,24 @@
+{
+    "AS_Image_f56399a3f3754147930cf41467dc643d": {
+        "id": "AS_Image_f56399a3f3754147930cf41467dc643d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "segEvents",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e6f7662f62f6468ca43c8742d187df8a"
+        },
+        "language": "js",
+        "actions": []
+    }
+}

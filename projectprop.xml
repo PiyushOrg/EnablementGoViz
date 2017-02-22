@@ -523,10 +523,5 @@
     <attributes name="androidenablejsbindings" value="false"/>
     <attributes name="camerasettings" value=""/>
     <attributes name="pathprefixkey" value=""/>
-    <attributes name="cloud_url" value="https://mobilefabric-demo.konycloud.com"/>
-    <attributes name="cloud_env_name" value="Kony Cloud MobileFabric-MobileFabric"/>
-    <attributes name="cloud_env_GUID" value="f624671f-9244-42e8-a143-809a3e0e7aaf"/>
-    <attributes name="cloud_account_id" value="100003520"/>
-    <attributes name="cloud_account_guid" value="047da162-d5b8-4088-af89-0f280b71528e"/>
     <attributes name="defaultlocalekey" value=""/>
 </properties>

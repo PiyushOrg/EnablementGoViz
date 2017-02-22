@@ -5,7 +5,7 @@ function addWidgetsfrmLogin() {
         "clipBounds": true,
         "height": "100%",
         "id": "flxImgBack",
-        "isVisible": true,
+        "isVisible": false,
         "layoutType": kony.flex.FREE_FORM,
         "left": "0%",
         "skin": "slFbox",
@@ -66,7 +66,7 @@ function addWidgetsfrmLogin() {
         "clipBounds": true,
         "height": "12%",
         "id": "flxOutlook",
-        "isVisible": true,
+        "isVisible": false,
         "layoutType": kony.flex.FREE_FORM,
         "left": "0%",
         "onClick": AS_FlexContainer_0268bf079e5c4840a7286b769cd9c7ed,
@@ -93,7 +93,25 @@ function addWidgetsfrmLogin() {
         "paddingInPixel": false
     }, {});
     flxOutlook.add(img);
-    frmLogin.add(flxImgBack, flxOutlook);
+    var SignInBtn = new kony.ui.Button({
+        "centerX": "49.97%",
+        "focusSkin": "loginBtnSkn",
+        "height": "8.20%",
+        "id": "SignInBtn",
+        "isVisible": true,
+        "onClick": AS_Button_a884707aea9947d487ce884aae03b566,
+        "skin": "loginBtnSkn",
+        "text": "Sign In using Outlook",
+        "top": "74.28%",
+        "width": "86.50%",
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "displayText": true,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    frmLogin.add(flxImgBack, flxOutlook, SignInBtn);
 };
 
 function frmLoginGlobals() {
@@ -105,7 +123,7 @@ function frmLoginGlobals() {
         "needAppMenu": true,
         "postShow": AS_Form_09a8ff578ca04620956942e05b106af0,
         "preShow": AS_Form_55edb0dc1055436c9bf3fe12dba3fa35,
-        "skin": "slForm"
+        "skin": "CopyslForm074e4ff5981124a"
     }, {
         "displayOrientation": constants.FORM_DISPLAY_ORIENTATION_PORTRAIT,
         "layoutType": kony.flex.FREE_FORM,

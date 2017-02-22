@@ -115,6 +115,7 @@ function userInfo() {
             //alert("score is "+res.result[0].cumulative_score)
             frmHome.tabHome.lblRank = res.result[0].rank;
             frmHome.tabHome.lblTotalPoints = res.result[0].cumulative_score;
+            alert(frmHome.tabHome.lblRank);
         }
 
         function failureCallBackUserInfo(err) {

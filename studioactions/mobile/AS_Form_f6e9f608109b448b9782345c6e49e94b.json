@@ -1,0 +1,30 @@
+{
+    "AS_Form_f6e9f608109b448b9782345c6e49e94b": {
+        "id": "AS_Form_f6e9f608109b448b9782345c6e49e94b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmSlide5",
+            "type": "forms",
+            "platform": null,
+            "KUID": "f20a0194dd274c51b50fa2a52a2c27f1"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__ae15f6002b3941ffbbd35e9f8e1d3b28",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "frmLogin.show();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

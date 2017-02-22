@@ -1,0 +1,57 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "11dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s3ce2c35fb0545eea7098695a81cf544",
+    "_text_": "My Events",
+    "_top_": {
+        "type": "string",
+        "value": "6dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s3ce2c35fb0545eea7098695a81cf544",
+    "id": "MyEventsBtn",
+    "info": null,
+    "isvisible": false,
+    "kuid": "d51f973e0d774543ba5ac1b1b369d2e1",
+    "name": "kony.ui.Button",
+    "parent": "Cont2",
+    "pf": "frmHome",
+    "wType": "Button",
+    "zindex": 1
+}

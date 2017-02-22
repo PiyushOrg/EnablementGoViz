@@ -41,7 +41,7 @@
         "value": "50%"
     },
     "children": [
-        "lblMyEventName",
+        "RateItCont",
         "LocationCont",
         "TimingsCont",
         "PointsCont",
@@ -55,7 +55,7 @@
     "info": null,
     "isvisible": true,
     "kuid": "848333ac7a8f40ed9191ecb3e242334b",
-    "layouttype": 2,
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxEventDescription",
     "pf": "frmMyEventDetailed",

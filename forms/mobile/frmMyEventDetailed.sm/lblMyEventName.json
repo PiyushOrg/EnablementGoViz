@@ -39,6 +39,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblMyEventName",
@@ -61,7 +65,7 @@
     "isvisible": true,
     "kuid": "e648169692db4d05b095dd14bcf0449e",
     "name": "kony.ui.Label",
-    "parent": "DescriptionCont",
+    "parent": "RateItCont",
     "pf": "frmMyEventDetailed",
     "textStyle": {
         "strikeThrough": false

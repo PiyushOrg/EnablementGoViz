@@ -44,7 +44,7 @@
     "enablescrolling": true,
     "id": "flxImgBack",
     "info": null,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "61422584554c49aebd54157896710c90",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

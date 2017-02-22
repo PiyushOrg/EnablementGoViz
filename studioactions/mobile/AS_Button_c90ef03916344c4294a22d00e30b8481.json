@@ -1,0 +1,20 @@
+{
+    "AS_Button_c90ef03916344c4294a22d00e30b8481": {
+        "id": "AS_Button_c90ef03916344c4294a22d00e30b8481",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_f29c1bd78a2146f4a5cd2303ac26626c",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "rateSubmit",
+            "display": "rateSubmit",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null
+        }]
+    }
+}

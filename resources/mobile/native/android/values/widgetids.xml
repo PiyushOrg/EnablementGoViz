@@ -61,6 +61,13 @@
   <item type="id" name="ScanCont"/>
   <item type="id" name="ScanImg"/>
   <item type="id" name="BtnScan"/>
+  <item type="id" name="TabHeadCont"/>
+  <item type="id" name="cont1"/>
+  <item type="id" name="EventsBtn"/>
+  <item type="id" name="lblLine"/>
+  <item type="id" name="Cont2"/>
+  <item type="id" name="MyEventsBtn"/>
+  <item type="id" name="lblline1"/>
   <item type="id" name="flxComment"/>
   <item type="id" name="btnClose"/>
   <item type="id" name="flxEnroll"/>
@@ -72,6 +79,7 @@
   <item type="id" name="flxLogo"/>
   <item type="id" name="flxOutlook"/>
   <item type="id" name="img"/>
+  <item type="id" name="SignInBtn"/>
   <item type="id" name="frmMyEventDetailed"/>
   <item type="id" name="flxEvent"/>
   <item type="id" name="flxImage"/>
@@ -79,12 +87,30 @@
   <item type="id" name="segMyEvent"/>
   <item type="id" name="CopyflxBack0609409ffb19542"/>
   <item type="id" name="CopyimgBack0ed0b98618fc14c"/>
+  <item type="id" name="RateItCont"/>
+  <item type="id" name="rateitbtn"/>
+  <item type="id" name="RateStars"/>
+  <item type="id" name="FlexContainer0ee3e39e2f95541"/>
+  <item type="id" name="StarCont"/>
+  <item type="id" name="Star1"/>
+  <item type="id" name="Star2"/>
+  <item type="id" name="Star3"/>
+  <item type="id" name="Star4"/>
+  <item type="id" name="Star5"/>
+  <item type="id" name="RateBtn"/>
+  <item type="id" name="frmSlide1"/>
+  <item type="id" name="SlideCont"/>
+  <item type="id" name="Slide"/>
+  <item type="id" name="skipBtn"/>
+  <item type="id" name="frmSlide2"/>
+  <item type="id" name="frmSlide3"/>
+  <item type="id" name="frmSlide4"/>
+  <item type="id" name="frmSlide5"/>
   <item type="id" name="MyEventSegNew"/>
   <item type="id" name="EventMainCont"/>
   <item type="id" name="CardCont"/>
   <item type="id" name="lblPlaceName"/>
   <item type="id" name="lblPlace"/>
-  <item type="id" name="lblLine"/>
   <item type="id" name="TimeCont"/>
   <item type="id" name="lblTimeName"/>
   <item type="id" name="lblTime"/>
@@ -104,11 +130,6 @@
   <item type="id" name="lblMax"/>
   <item type="id" name="RatingCont"/>
   <item type="id" name="RatingBar"/>
-  <item type="id" name="Star1"/>
-  <item type="id" name="Star2"/>
-  <item type="id" name="Star3"/>
-  <item type="id" name="Star4"/>
-  <item type="id" name="Star5"/>
   <item type="id" name="NoOfRatings"/>
   <item type="id" name="flxImg"/>
   <item type="id" name="lblEventID"/>

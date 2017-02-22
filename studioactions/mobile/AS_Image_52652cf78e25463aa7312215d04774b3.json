@@ -1,0 +1,29 @@
+{
+    "AS_Image_52652cf78e25463aa7312215d04774b3": {
+        "id": "AS_Image_52652cf78e25463aa7312215d04774b3",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onTouchStart_a49e98a2dfd348e1945a2e85a9a55a1d",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "Rateit",
+            "display": "Rateit",
+            "inputparams": [{
+                "name": "id",
+                "value": " eventobject.id\n "
+            }],
+            "callbackType": null,
+            "disabled": null
+        }]
+    }
+}

@@ -2,7 +2,7 @@
     "splashScreen": {
         "mobile": {
             "iphone": {
-                "splashImage": "splashup.png",
+                "splashImage": "splash01.png",
                 "showLoadingIndicator": true
             },
             "android": {
@@ -14,8 +14,9 @@
             "spaan": {},
             "spabb": {},
             "spawinphone8": {},
-            "splashImage": "splashlogin.png",
-            "showLoadingIndicator": false
+            "splashImage": "splash01.png",
+            "showLoadingIndicator": false,
+            "winphone10": {}
         },
         "tablet": {
             "ipad": {

@@ -4,7 +4,7 @@
     "font_size": 100,
     "isForked": false
   },
-  "background_color": "5f91ffff",
+  "background_color": "000000ff",
   "bg_type": "one",
   "border_color": "414141ff",
   "border_style": "plain",
@@ -18,7 +18,7 @@
   "font_color": "ffffffff",
   "font_name": "Arial",
   "font_size": 100,
-  "font_style": "underline",
+  "font_style": "normal",
   "font_weight": "normal",
   "ipad": {
     "font_size": 100,

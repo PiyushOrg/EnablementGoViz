@@ -1,0 +1,20 @@
+{
+    "AS_Button_28a5ebd93d7b4215972922f77f81ab50": {
+        "id": "AS_Button_28a5ebd93d7b4215972922f77f81ab50",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_a799ebeb74e641b298d49e8d10450e57",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "eventEnroll",
+            "display": "eventEnroll",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null
+        }]
+    }
+}

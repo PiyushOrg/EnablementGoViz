@@ -5,9 +5,12 @@ var eventId;
 var arr=[];
 var scanID,session_name;
 var eventData=[];
+var EventsData=[];
+var flag=[];
 
 function showeventsf()
 {
+  
   //alert("event called")
   if(kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)){
     kony.print("myString");
@@ -16,11 +19,11 @@ function showeventsf()
     var headers = {};	
     var params={};
     integrationObj.invokeOperation(operationName, headers, params, successCallBack1, failureCallBack1);
-    //kony.application.showLoadingScreen("sknLoading","Loading..",constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true,null);
+    kony.application.showLoadingScreen("sknLoading","Loading..",constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true,null);
 
     function successCallBack1(result){
       var res = result;
-      kony.print("myString1");
+     
       eventData=[];
       
       //       alert("success"+JSON.stringify(res));
@@ -28,19 +31,59 @@ function showeventsf()
       //       alert(JSON.stringify(res));
       // alert("Success1 length is"+res.result.length);
       //frmEventDetail.ScheduleSeg.removeAll();
+      
       for(var i=0 ; i<res.result.length;i++)
       {
-        eventData.push({"location":res.result[i].location,"event_id":res.result[i].event_id,"name":res.result[i].name,"max_score":res.result[i].max_score,"description":res.result[i].description});
+        var imageBanner="";//
+        var eventCategory=setBanner(res.result[i].event_type);
+        
+        if(eventCategory==="Hackathon")
+    imageBanner="banner4.png";
+  if(eventCategory==="Workshop")
+    imageBanner="banner3.png";
+  if(eventCategory==="Training")
+    imageBanner="banner5.png";
+  if(eventCategory==="Feature")
+   imageBanner="banner1.png";
+  if(eventCategory==="Technical")
+  imageBanner="banner2.png";
+        
+        
+        var rating=setRating(res.result[i].averageRating);
+        var likeCount=res.result[i].likes.length;
+        //alert(res.result[i].session_st);
+        var dateEdited=splitDate(res.result[i].sessions[0].session_st);
+        var noRates=34;//res.result[i].ratingList.length;
+        eventData.push({
+          "lblMax":"Points:","NoOfRatings":"("+noRates+")","lblUpcoming":res.result[i].status,"lblLocationName":"Location :",
+          "lblTimeName":"Time:","lblTime":"","LikeImg":"like_icn.png",
+          "LikesCountlbl":likeCount,
+          "lblDay":dateEdited[0],"lblDate":dateEdited[1],
+          "imgEvent":imageBanner,"lblLocation":res.result[i].location,"event_id":res.result[i].event_id,"lblEventName":res.result[i].name,"lblScore":res.result[i].max_score,
+          "Star1":rating[1],"Star2":rating[2],"Star3":rating[3],"Star4":rating[4],"Star5":rating[5]
+        });
+        EventsData.push({
+        
+          "lblMax":"Points:","NoOfRatings":"("+noRates+")","lblUpcoming":res.result[i].status,"lblLocationName":"Location :",
+          "lblTimeName":"Time:","lblTime":"","LikeImg":"like_icn.png",
+          "LikesCountlbl":likeCount,
+          "lblDay":dateEdited[0],"lblDate":dateEdited[1],
+          "imgEvent":imageBanner,"lblLocation":res.result[i].location,"event_id":res.result[i].event_id,"lblEventName":res.result[i].name,"lblScore":res.result[i].max_score,
+          "Star1":rating[1],"Star2":rating[2],"Star3":rating[3],"Star4":rating[4],"Star5":rating[5]
+        }
+        );
+        flag.push(0);
         event.push(res.result[i].event_id);
         session.push({"sessions":res.result[i].sessions});
       }
+      kony.print("result .  :::"+JSON.stringify(eventData));
 
       //frmHome.tabHome.tabMyEvent.segMyEvents.widgetDataMap = {"lblPlace":"location","lblEventName":"name"};
       //frmHome.tabHome.tabMyEvent.segMyEvents.setData(obj);
 
-      frmHome.tabHome.tabEvent.segEvents.widgetDataMap = {"lblLocation":"location","lblEventName":"name","lblDescription":"description","lblScore":"max_score"};
+      //frmHome.tabHome.tabEvent.segEvents.widgetDataMap = {"lblLocation":"location","lblEventName":"name","lblDescription":"description","lblScore":"max_score"};
       frmHome.tabHome.tabEvent.segEvents.setData(eventData);
-     // kony.application.dismissLoadingScreen();
+      kony.application.dismissLoadingScreen();
       //myEvents();
     }
     function failureCallBack1(err){

@@ -2,7 +2,7 @@ function initializesegEvents() {
     flxEv = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "clipBounds": true,
-        "height": "43%",
+        "height": "45%",
         "id": "flxEv",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
@@ -33,7 +33,7 @@ function initializesegEvents() {
         "isVisible": true,
         "layoutType": kony.flex.FLOW_VERTICAL,
         "skin": "CopyslFbox0075ffa25008f4f",
-        "width": "99.90%",
+        "width": "99.95%",
         "zIndex": 1
     }, {}, {});
     flxMain.setDefaultUnit(kony.flex.DP);
@@ -41,7 +41,7 @@ function initializesegEvents() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "15%",
+        "height": "14%",
         "id": "flxHeader",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
@@ -117,13 +117,12 @@ function initializesegEvents() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "12%",
+        "height": "9%",
         "id": "RatingCont",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
-        "left": 0,
         "skin": "slFbox",
-        "top": "0dp",
+        "top": "0%",
         "width": "100%",
         "zIndex": 1
     }, {}, {});
@@ -243,7 +242,7 @@ function initializesegEvents() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "45%",
+        "height": "50%",
         "id": "flxImg",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
@@ -258,10 +257,8 @@ function initializesegEvents() {
         "height": "100%",
         "id": "imgEvent",
         "isVisible": true,
-        "left": "0%",
         "skin": "slImage",
         "src": "bck.PNG",
-        "top": "1%",
         "width": "100%",
         "zIndex": 1
     }, {
@@ -581,6 +578,7 @@ function initializesegEvents() {
         "id": "LikeImg",
         "isVisible": true,
         "left": "2%",
+        "onTouchEnd": AS_Image_f56399a3f3754147930cf41467dc643d,
         "skin": "slImage",
         "src": "imagedrag.png",
         "width": "15dp",

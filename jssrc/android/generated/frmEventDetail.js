@@ -110,7 +110,7 @@ function addWidgetsfrmEventDetail() {
         "isVisible": true,
         "left": "0%",
         "skin": "slImage",
-        "src": "carousel4.png",
+        "src": "ba1.png",
         "top": "0%",
         "width": "100%",
         "zIndex": 1
@@ -148,7 +148,7 @@ function addWidgetsfrmEventDetail() {
         "centerX": "50%",
         "clipBounds": true,
         "enableScrolling": true,
-        "height": "67.50%",
+        "height": "60%",
         "horizontalScrollIndicator": true,
         "id": "flxEventDescription",
         "isVisible": true,
@@ -157,7 +157,7 @@ function addWidgetsfrmEventDetail() {
         "pagingEnabled": false,
         "scrollDirection": kony.flex.SCROLL_VERTICAL,
         "skin": "slFSbox",
-        "top": "20.50%",
+        "top": "30%",
         "verticalScrollIndicator": true,
         "width": "100%",
         "zIndex": 1
@@ -169,7 +169,7 @@ function addWidgetsfrmEventDetail() {
         "height": "100%",
         "id": "DescriptionCont",
         "isVisible": true,
-        "layoutType": kony.flex.FREE_FORM,
+        "layoutType": kony.flex.FLOW_VERTICAL,
         "left": "5%",
         "right": "5%",
         "skin": "CopyslFbox062dd4e1035c049",
@@ -200,13 +200,13 @@ function addWidgetsfrmEventDetail() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "10%",
+        "height": "6%",
         "id": "LocationCont",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
         "left": "0%",
         "skin": "slFbox",
-        "top": "6.50%",
+        "top": "0%",
         "width": "100%",
         "zIndex": 1
     }, {}, {});
@@ -256,13 +256,13 @@ function addWidgetsfrmEventDetail() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "10%",
+        "height": "6%",
         "id": "TimingsCont",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
         "left": "0%",
         "skin": "slFbox",
-        "top": "14%",
+        "top": "0%",
         "width": "100%",
         "zIndex": 1
     }, {}, {});
@@ -312,13 +312,13 @@ function addWidgetsfrmEventDetail() {
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",
         "clipBounds": true,
-        "height": "10%",
+        "height": "6%",
         "id": "PointsCont",
         "isVisible": true,
         "layoutType": kony.flex.FLOW_HORIZONTAL,
         "left": "0%",
         "skin": "slFbox",
-        "top": "20.50%",
+        "top": "0%",
         "width": "100%",
         "zIndex": 1
     }, {}, {});
@@ -373,7 +373,7 @@ function addWidgetsfrmEventDetail() {
         "layoutType": kony.flex.FLOW_VERTICAL,
         "left": "0%",
         "skin": "slFbox",
-        "top": "29.50%",
+        "top": "0%",
         "width": "100%",
         "zIndex": 1
     }, {}, {});
@@ -452,7 +452,7 @@ function addWidgetsfrmEventDetail() {
         "pagingEnabled": false,
         "scrollDirection": kony.flex.SCROLL_VERTICAL,
         "skin": "slFSbox",
-        "top": "55%",
+        "top": "0%",
         "verticalScrollIndicator": true,
         "width": "100%",
         "zIndex": 1

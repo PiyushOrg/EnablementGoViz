@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s3f768fd25ab44b297054cc4d6ed59a4",
+    "_skin_": "s42c1aeb1b5a41f2816640740095c85a",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -27,7 +27,8 @@
     "canUpdateUI": true,
     "children": [
         "flxImgBack",
-        "flxOutlook"
+        "flxOutlook",
+        "SignInBtn"
     ],
     "containerweight": 100,
     "currentLocale": "default",

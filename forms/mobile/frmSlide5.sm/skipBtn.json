@@ -1,0 +1,50 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "7%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s2c9311cd7e149d3abfe21e292b2114e",
+    "_text_": "Skip",
+    "_width_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "90%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "93%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s2c9311cd7e149d3abfe21e292b2114e",
+    "id": "skipBtn",
+    "ide_onClick": "AS_Button_d810e5fa96554bd69efe2b86912c858e",
+    "info": null,
+    "isvisible": true,
+    "kuid": "5a0f7f3e49a5471189bc0982b07edcd5",
+    "name": "kony.ui.Button",
+    "parent": "frmSlide5",
+    "pf": "frmSlide5",
+    "wType": "Button",
+    "zindex": 1
+}

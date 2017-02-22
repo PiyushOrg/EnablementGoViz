@@ -16,8 +16,6 @@ function addWidgetsfrmHome() {
     flxHome.setDefaultUnit(kony.flex.DP);
     var flxHeader = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
-        "centerX": "50%",
-        "centerY": "3%",
         "clipBounds": true,
         "height": "6%",
         "id": "flxHeader",
@@ -301,7 +299,7 @@ function addWidgetsfrmHome() {
             "Star5": "imagedrag.png",
             "imgComment": "comment.png",
             "imgEnroll": "enroll.png",
-            "imgEvent": "bck.PNG",
+            "imgEvent": "banner1.png",
             "imgLike": "like.png",
             "lblCompleted": "Completed",
             "lblDate": "Feb 17",
@@ -330,7 +328,7 @@ function addWidgetsfrmHome() {
             "Star5": "imagedrag.png",
             "imgComment": "comment.png",
             "imgEnroll": "enroll.png",
-            "imgEvent": "bck.PNG",
+            "imgEvent": "banner2.png",
             "imgLike": "like.png",
             "lblCompleted": "Completed",
             "lblDate": "Feb 17",
@@ -359,7 +357,7 @@ function addWidgetsfrmHome() {
             "Star5": "imagedrag.png",
             "imgComment": "comment.png",
             "imgEnroll": "enroll.png",
-            "imgEvent": "bck.PNG",
+            "imgEvent": "banner3.png",
             "imgLike": "like.png",
             "lblCompleted": "Completed",
             "lblDate": "Feb 17",
@@ -462,6 +460,7 @@ function addWidgetsfrmHome() {
         "id": "tabMyEvent",
         "isVisible": true,
         "layoutType": kony.flex.FREE_FORM,
+        "onInit": AS_Tab_8fea5489f535407c84f31bbfafc7e05f,
         "onTouchStart": AS_Tab_efc43ca2af1f42019d7fa618661da560,
         "orientation": constants.BOX_LAYOUT_VERTICAL,
         "skin": "CopyslTab02ac065d26d144e",
@@ -622,7 +621,7 @@ function addWidgetsfrmHome() {
         "id": "IdentityImg",
         "isVisible": true,
         "skin": "slImage",
-        "src": "image4.png",
+        "src": "propilepic1.png",
         "width": "100%",
         "zIndex": 1
     }, {
@@ -743,7 +742,7 @@ function addWidgetsfrmHome() {
         "paddingInPixel": false
     }, {});
     tabMyEvent.add(IdentityCont, segMyEvents);
-    tabHome.addTab("tabMyEvent", "My Event", null, tabMyEvent, null);
+    tabHome.addTab("tabMyEvent", "My Event", null, tabMyEvent, AS_Tab_8fea5489f535407c84f31bbfafc7e05f);
     var ScanCont = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "85%",
@@ -791,7 +790,133 @@ function addWidgetsfrmHome() {
         "paddingInPixel": false
     }, {});
     ScanCont.add(ScanImg, BtnScan);
-    flxHome.add(flxHeader, flxSearch, tabHome, ScanCont);
+    var TabHeadCont = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerX": "50%",
+        "clipBounds": true,
+        "height": "0.60%",
+        "id": "TabHeadCont",
+        "isVisible": true,
+        "layoutType": kony.flex.FLOW_HORIZONTAL,
+        "skin": "slFbox",
+        "top": "13%",
+        "width": "100%",
+        "zIndex": 1
+    }, {}, {});
+    TabHeadCont.setDefaultUnit(kony.flex.DP);
+    var cont1 = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerY": "50%",
+        "clipBounds": true,
+        "height": "100%",
+        "id": "cont1",
+        "isVisible": true,
+        "layoutType": kony.flex.FREE_FORM,
+        "left": "0%",
+        "skin": "CopyslFbox06002a280f13645",
+        "width": "50%",
+        "zIndex": 1
+    }, {}, {});
+    cont1.setDefaultUnit(kony.flex.DP);
+    var EventsBtn = new kony.ui.Button({
+        "centerX": "50%",
+        "centerY": "50%",
+        "focusSkin": "CopyslButtonGlossBlue0c0baf9e5387742",
+        "height": "100%",
+        "id": "EventsBtn",
+        "isVisible": false,
+        "left": "11dp",
+        "onClick": AS_Button_684929d1c4bd455f9f875eea2ab96cda,
+        "skin": "CopyslButtonGlossBlue0c0baf9e5387742",
+        "text": "Events",
+        "top": "6dp",
+        "width": "100%",
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "displayText": true,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var lblLine = new kony.ui.Label({
+        "centerX": "50%",
+        "centerY": "50%",
+        "height": "100%",
+        "id": "lblLine",
+        "isVisible": false,
+        "skin": "CopyslLabel0a0c5588b4e0b44",
+        "text": "0",
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        },
+        "width": "100%",
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {
+        "textCopyable": false
+    });
+    cont1.add(EventsBtn, lblLine);
+    var Cont2 = new kony.ui.FlexContainer({
+        "autogrowMode": kony.flex.AUTOGROW_NONE,
+        "centerY": "50%",
+        "clipBounds": true,
+        "height": "100%",
+        "id": "Cont2",
+        "isVisible": true,
+        "layoutType": kony.flex.FREE_FORM,
+        "left": "0%",
+        "skin": "CopyslFbox00960bbe8ab8a4a",
+        "width": "50%",
+        "zIndex": 1
+    }, {}, {});
+    Cont2.setDefaultUnit(kony.flex.DP);
+    var MyEventsBtn = new kony.ui.Button({
+        "centerX": "50%",
+        "centerY": "50%",
+        "focusSkin": "CopyslButtonGlossBlue0c0baf9e5387742",
+        "height": "100%",
+        "id": "MyEventsBtn",
+        "isVisible": false,
+        "left": "11dp",
+        "skin": "CopyslButtonGlossBlue0c0baf9e5387742",
+        "text": "My Events",
+        "top": "6dp",
+        "width": "100%",
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "displayText": true,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {});
+    var lblline1 = new kony.ui.Label({
+        "centerX": "50%",
+        "centerY": "50%",
+        "height": "100%",
+        "id": "lblline1",
+        "isVisible": true,
+        "skin": "CopyslLabel0a0c5588b4e0b44",
+        "text": "0",
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        },
+        "width": "100%",
+        "zIndex": 1
+    }, {
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "padding": [0, 0, 0, 0],
+        "paddingInPixel": false
+    }, {
+        "textCopyable": false
+    });
+    Cont2.add(MyEventsBtn, lblline1);
+    TabHeadCont.add(cont1, Cont2);
+    flxHome.add(flxHeader, flxSearch, tabHome, ScanCont, TabHeadCont);
     var flxComment = new kony.ui.FlexContainer({
         "autogrowMode": kony.flex.AUTOGROW_NONE,
         "centerX": "50%",

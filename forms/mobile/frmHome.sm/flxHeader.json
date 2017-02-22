@@ -27,14 +27,8 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "3%"
-    },
+    "centerx": "50%",
+    "centery": "3%",
     "children": [
         "imgLogo",
         "lblTitle1",

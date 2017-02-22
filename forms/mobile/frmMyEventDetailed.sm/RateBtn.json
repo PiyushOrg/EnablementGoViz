@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "13%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "19dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s396eb11cf7349d7a263fafd8962cf53",
+    "_text_": "Rate It",
+    "_width_": {
+        "type": "string",
+        "value": "20%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "80%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sb3ee9c871a445fc9e5d1bb6f67fb2b5",
+    "id": "RateBtn",
+    "ide_onClick": "AS_Button_c90ef03916344c4294a22d00e30b8481",
+    "info": null,
+    "isvisible": true,
+    "kuid": "036d4149c5e84af5804de0bf201fac79",
+    "name": "kony.ui.Button",
+    "parent": "FlexContainer0ee3e39e2f95541",
+    "pf": "frmMyEventDetailed",
+    "wType": "Button",
+    "zindex": 5
+}

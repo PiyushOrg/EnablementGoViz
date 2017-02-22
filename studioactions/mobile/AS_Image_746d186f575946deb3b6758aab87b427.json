@@ -1,0 +1,36 @@
+{
+    "AS_Image_746d186f575946deb3b6758aab87b427": {
+        "id": "AS_Image_746d186f575946deb3b6758aab87b427",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmMyEventDetailed",
+            "type": "forms",
+            "platform": "",
+            "KUID": "1c4373d8799040819287da65ea1ee7d0"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___bf5163ab9a1a4a70a469f338ad227150",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "Rateit",
+            "display": "Rateit",
+            "inputparams": [{
+                "name": "id",
+                "value": " eventobject.id\n "
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null
+        }]
+    }
+}
